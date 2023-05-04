@@ -1,0 +1,243 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:37109 (IPv4)
+Extension host agent listening on 37109
+
+[03:20:08] 
+
+
+
+
+[03:20:08] Extension host agent started.
+[03:20:08] Started initializing default profile extensions in extensions installation folder. file:///home/vagrant/.vscode-server/extensions
+[03:20:10] Completed initializing default profile extensions in extensions installation folder. file:///home/vagrant/.vscode-server/extensions
+Got delay-shutdown request while in shutdown timeout, delaying
+[03:20:13] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[03:20:13] Cancelling previous shutdown timeout
+[03:20:13] [127.0.0.1][6d3c8674][ManagementConnection] New connection established.
+[03:20:13] [127.0.0.1][c83755a5][ExtensionHostConnection] New connection established.
+[03:20:13] [127.0.0.1][c83755a5][ExtensionHostConnection] <12282> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[03:20:15] Error [CodeExpectedError]: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[03:20:16] Error [CodeExpectedError]: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateIcon (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[03:20:16] Error [CodeExpectedError]: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateIcon (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
+    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+Got delay-shutdown request while in shutdown timeout, delaying
+[03:20:47] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[03:20:47] Cancelling previous shutdown timeout
+[03:20:47] [127.0.0.1][89a805b4][ManagementConnection] New connection established.
+[03:20:47] [127.0.0.1][8802194b][ExtensionHostConnection] New connection established.
+[03:20:47] [127.0.0.1][8802194b][ExtensionHostConnection] <12546> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[03:21:25] [127.0.0.1][6d3c8674][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[03:21:26] [127.0.0.1][c83755a5][ExtensionHostConnection] <12282> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[03:21:26] Cancelling previous shutdown timeout
