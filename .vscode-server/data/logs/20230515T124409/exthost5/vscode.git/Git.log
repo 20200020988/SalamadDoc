@@ -1,0 +1,39 @@
+2023-05-15 16:46:58.557 [info] Log level: Info
+2023-05-15 16:46:58.558 [info] Validating found git in: "git"
+2023-05-15 16:46:58.558 [info] Using git "2.25.1" from "git"
+2023-05-15 16:46:58.558 [info] > git rev-parse --show-toplevel [129ms]
+2023-05-15 16:46:58.558 [info] > git rev-parse --git-dir --git-common-dir [33ms]
+2023-05-15 16:46:58.558 [info] Open repository: /home/vagrant
+2023-05-15 16:46:58.559 [info] > git rev-parse --show-toplevel [15ms]
+2023-05-15 16:46:58.559 [info] > git config --get commit.template [10ms]
+2023-05-15 16:46:58.559 [info] No remotes found in the git config file.
+2023-05-15 16:46:58.559 [info] > git rev-parse --show-toplevel [16ms]
+2023-05-15 16:46:58.559 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [16ms]
+2023-05-15 16:46:58.560 [info] > git rev-parse --show-toplevel [20ms]
+2023-05-15 16:46:58.561 [info] > git rev-parse --show-toplevel [26ms]
+2023-05-15 16:46:58.561 [info] > git status -z -uall [88ms]
+2023-05-15 16:46:58.561 [info] > git rev-parse --show-toplevel [21ms]
+2023-05-15 16:46:58.561 [info] > git rev-parse --show-toplevel [134ms]
+2023-05-15 16:46:58.562 [info] > git config --get commit.template [622ms]
+2023-05-15 16:46:58.562 [info] No remotes found in the git config file.
+2023-05-15 16:46:58.563 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [61ms]
+2023-05-15 16:46:58.563 [info] > git status -z -uall [120ms]
+2023-05-15 16:46:58.568 [info] > git check-ignore -v -z --stdin [24ms]
+2023-05-15 16:46:58.823 [info] > git show --textconv :myproject/myapp/templates/home.html [29ms]
+2023-05-15 16:46:58.828 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/templates/home.html [10ms]
+2023-05-15 16:47:20.098 [info] > git config --get commit.template [2ms]
+2023-05-15 16:47:20.113 [info] No remotes found in the git config file.
+2023-05-15 16:47:20.114 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-15 16:47:20.167 [info] > git status -z -uall [42ms]
+2023-05-15 16:47:25.235 [info] No remotes found in the git config file.
+2023-05-15 16:47:25.237 [info] > git config --get commit.template [10ms]
+2023-05-15 16:47:25.238 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2023-05-15 16:47:25.286 [info] > git status -z -uall [41ms]
+2023-05-15 16:47:35.685 [info] No remotes found in the git config file.
+2023-05-15 16:47:35.697 [info] > git config --get commit.template [13ms]
+2023-05-15 16:47:35.698 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-15 16:47:35.743 [info] > git status -z -uall [33ms]
+2023-05-15 16:47:40.823 [info] > git config --get commit.template [4ms]
+2023-05-15 16:47:40.837 [info] No remotes found in the git config file.
+2023-05-15 16:47:40.839 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-15 16:47:40.892 [info] > git status -z -uall [40ms]

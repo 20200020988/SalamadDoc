@@ -5,24 +5,18 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to 127.0.0.1:37109 (IPv4)
-Extension host agent listening on 37109
+Server bound to 127.0.0.1:34641 (IPv4)
+Extension host agent listening on 34641
 
-[03:20:08] 
-
-
+[23:26:54] 
 
 
-[03:20:08] Extension host agent started.
-[03:20:08] Started initializing default profile extensions in extensions installation folder. file:///home/vagrant/.vscode-server/extensions
-[03:20:10] Completed initializing default profile extensions in extensions installation folder. file:///home/vagrant/.vscode-server/extensions
-Got delay-shutdown request while in shutdown timeout, delaying
-[03:20:13] Got delay-shutdown request while in shutdown timeout, delaying
-Cancelling previous shutdown timeout
-[03:20:13] Cancelling previous shutdown timeout
-[03:20:13] [127.0.0.1][6d3c8674][ManagementConnection] New connection established.
-[03:20:13] [127.0.0.1][c83755a5][ExtensionHostConnection] New connection established.
-[03:20:13] [127.0.0.1][c83755a5][ExtensionHostConnection] <12282> Launched Extension Host Process.
+
+
+[23:26:54] Extension host agent started.
+[23:26:54] [127.0.0.1][8dc0a56c][ManagementConnection] New connection established.
+[23:26:54] [127.0.0.1][fe60f9df][ExtensionHostConnection] New connection established.
+[23:26:54] [127.0.0.1][fe60f9df][ExtensionHostConnection] <2139> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -83,100 +77,13 @@ Cancelling previous shutdown timeout
     'fi\n' +
     'exit 0'
 ]
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[03:20:15] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[03:20:16] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[03:20:16] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/252e5463d60e63238250799aef7375787f68b4ee/out/vs/platform/terminal/node/ptyHostMain.js:9:21008)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
 Got delay-shutdown request while in shutdown timeout, delaying
-[03:20:47] Got delay-shutdown request while in shutdown timeout, delaying
+[23:27:06] Got delay-shutdown request while in shutdown timeout, delaying
 Cancelling previous shutdown timeout
-[03:20:47] Cancelling previous shutdown timeout
-[03:20:47] [127.0.0.1][89a805b4][ManagementConnection] New connection established.
-[03:20:47] [127.0.0.1][8802194b][ExtensionHostConnection] New connection established.
-[03:20:47] [127.0.0.1][8802194b][ExtensionHostConnection] <12546> Launched Extension Host Process.
+[23:27:06] Cancelling previous shutdown timeout
+[23:27:06] [127.0.0.1][9c8af159][ManagementConnection] New connection established.
+[23:27:06] [127.0.0.1][37c9c5af][ExtensionHostConnection] New connection established.
+[23:27:06] [127.0.0.1][37c9c5af][ExtensionHostConnection] <2382> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -237,7 +144,18 @@ Cancelling previous shutdown timeout
     'fi\n' +
     'exit 0'
 ]
-[03:21:25] [127.0.0.1][6d3c8674][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[03:21:26] [127.0.0.1][c83755a5][ExtensionHostConnection] <12282> Extension Host Process exited with code: 0, signal: null.
+[23:27:11] Error: getaddrinfo EAI_AGAIN mobile.events.data.microsoft.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26) {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'mobile.events.data.microsoft.com'
+}
+[23:27:48] [127.0.0.1][9c8af159][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[23:27:48] [127.0.0.1][37c9c5af][ExtensionHostConnection] <2382> Extension Host Process exited with code: 0, signal: null.
 Cancelling previous shutdown timeout
-[03:21:26] Cancelling previous shutdown timeout
+[23:27:48] Cancelling previous shutdown timeout
+[23:27:50] [127.0.0.1][8dc0a56c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[23:27:50] [127.0.0.1][fe60f9df][ExtensionHostConnection] <2139> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[23:27:50] Last EH closed, waiting before shutting down

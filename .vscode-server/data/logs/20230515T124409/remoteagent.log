@@ -1,0 +1,80 @@
+2023-05-15 12:44:09.328 [info] 
+
+
+
+
+2023-05-15 12:44:10.483 [info] Extension host agent started.
+2023-05-15 12:44:10.776 [info] [127.0.0.1][cd32e43f][ManagementConnection] New connection established.
+2023-05-15 12:44:10.789 [info] [127.0.0.1][ce4eceb8][ExtensionHostConnection] New connection established.
+2023-05-15 12:44:10.804 [info] [127.0.0.1][ce4eceb8][ExtensionHostConnection] <1706> Launched Extension Host Process.
+2023-05-15 12:44:47.344 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-05-15 12:44:47.344 [info] Cancelling previous shutdown timeout
+2023-05-15 12:44:47.424 [info] [127.0.0.1][caa7d351][ManagementConnection] New connection established.
+2023-05-15 12:44:47.451 [info] [127.0.0.1][df892cbb][ExtensionHostConnection] New connection established.
+2023-05-15 12:44:47.485 [info] [127.0.0.1][df892cbb][ExtensionHostConnection] <1986> Launched Extension Host Process.
+2023-05-15 12:44:49.912 [error] CodeExpectedError: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-05-15 12:45:00.972 [info] [127.0.0.1][caa7d351][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-15 12:45:01.026 [info] [127.0.0.1][df892cbb][ExtensionHostConnection] <1986> Extension Host Process exited with code: 0, signal: null.
+2023-05-15 12:45:01.027 [info] Cancelling previous shutdown timeout
+2023-05-15 12:45:06.440 [info] [127.0.0.1][0295f737][ManagementConnection] New connection established.
+2023-05-15 12:45:06.445 [info] [127.0.0.1][8daf2d35][ExtensionHostConnection] New connection established.
+2023-05-15 12:45:06.451 [info] [127.0.0.1][8daf2d35][ExtensionHostConnection] <2267> Launched Extension Host Process.
+2023-05-15 12:45:08.855 [error] CodeExpectedError: Could not find pty on pty host
+    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
+    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
+    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
+    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
+    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
+    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
+    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:939:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-05-15 12:45:14.844 [info] [127.0.0.1][0295f737][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-15 12:45:14.917 [info] [127.0.0.1][8daf2d35][ExtensionHostConnection] <2267> Extension Host Process exited with code: 0, signal: null.
+2023-05-15 13:12:04.160 [info] [127.0.0.1][9a0833cf][ManagementConnection] New connection established.
+2023-05-15 13:12:04.222 [info] [127.0.0.1][2d24a5a7][ExtensionHostConnection] New connection established.
+2023-05-15 13:12:04.230 [info] [127.0.0.1][2d24a5a7][ExtensionHostConnection] <4263> Launched Extension Host Process.
+2023-05-15 13:40:29.007 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-15 13:47:46.384 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-15 14:44:53.527 [info] [127.0.0.1][cd32e43f][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-15 14:44:53.557 [info] [127.0.0.1][ce4eceb8][ExtensionHostConnection] <1706> Extension Host Process exited with code: 0, signal: null.
+2023-05-15 14:48:46.438 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-15 15:12:33.402 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-15 16:46:40.022 [info] [127.0.0.1][9a0833cf][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-15 16:46:40.102 [info] [127.0.0.1][2d24a5a7][ExtensionHostConnection] <4263> Extension Host Process exited with code: 0, signal: null.
+2023-05-15 16:46:40.103 [info] Last EH closed, waiting before shutting down
+2023-05-15 16:46:53.278 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-05-15 16:46:53.278 [info] Cancelling previous shutdown timeout
+2023-05-15 16:46:53.548 [info] [127.0.0.1][1d900331][ManagementConnection] New connection established.
+2023-05-15 16:46:53.551 [info] [127.0.0.1][8deda77b][ExtensionHostConnection] New connection established.
+2023-05-15 16:46:53.571 [info] [127.0.0.1][8deda77b][ExtensionHostConnection] <26884> Launched Extension Host Process.
+2023-05-15 16:47:41.499 [info] [127.0.0.1][1d900331][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-15 16:47:41.594 [info] [127.0.0.1][8deda77b][ExtensionHostConnection] <26884> Extension Host Process exited with code: 0, signal: null.
+2023-05-15 16:47:41.594 [info] Cancelling previous shutdown timeout
+2023-05-15 16:47:41.595 [info] Last EH closed, waiting before shutting down
+2023-05-15 16:51:09.359 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-05-15 16:51:09.359 [info] Cancelling previous shutdown timeout
+2023-05-15 16:51:09.662 [info] [127.0.0.1][26148d59][ManagementConnection] New connection established.
+2023-05-15 16:51:09.663 [info] [127.0.0.1][c64543f8][ExtensionHostConnection] New connection established.
+2023-05-15 16:51:09.675 [info] [127.0.0.1][c64543f8][ExtensionHostConnection] <27543> Launched Extension Host Process.

@@ -61,3 +61,6 @@
 2023-05-04 03:21:25.978 [info] [127.0.0.1][6d3c8674][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
 2023-05-04 03:21:26.000 [info] [127.0.0.1][c83755a5][ExtensionHostConnection] <12282> Extension Host Process exited with code: 0, signal: null.
 2023-05-04 03:21:26.001 [info] Cancelling previous shutdown timeout
+2023-05-04 04:16:39.149 [info] [127.0.0.1][89a805b4][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-04 04:16:39.199 [info] [127.0.0.1][8802194b][ExtensionHostConnection] <12546> Extension Host Process exited with code: 0, signal: null.
+2023-05-04 04:16:39.200 [info] Last EH closed, waiting before shutting down

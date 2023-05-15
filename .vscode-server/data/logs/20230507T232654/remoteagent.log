@@ -1,0 +1,22 @@
+2023-05-07 23:26:54.296 [info] 
+
+
+
+
+2023-05-07 23:26:54.352 [info] Extension host agent started.
+2023-05-07 23:26:54.505 [info] [127.0.0.1][8dc0a56c][ManagementConnection] New connection established.
+2023-05-07 23:26:54.507 [info] [127.0.0.1][fe60f9df][ExtensionHostConnection] New connection established.
+2023-05-07 23:26:54.511 [info] [127.0.0.1][fe60f9df][ExtensionHostConnection] <2139> Launched Extension Host Process.
+2023-05-07 23:27:06.489 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-05-07 23:27:06.489 [info] Cancelling previous shutdown timeout
+2023-05-07 23:27:06.571 [info] [127.0.0.1][9c8af159][ManagementConnection] New connection established.
+2023-05-07 23:27:06.591 [info] [127.0.0.1][37c9c5af][ExtensionHostConnection] New connection established.
+2023-05-07 23:27:06.601 [info] [127.0.0.1][37c9c5af][ExtensionHostConnection] <2382> Launched Extension Host Process.
+2023-05-07 23:27:11.758 [error] Error: getaddrinfo EAI_AGAIN mobile.events.data.microsoft.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+2023-05-07 23:27:48.308 [info] [127.0.0.1][9c8af159][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-07 23:27:48.340 [info] [127.0.0.1][37c9c5af][ExtensionHostConnection] <2382> Extension Host Process exited with code: 0, signal: null.
+2023-05-07 23:27:48.341 [info] Cancelling previous shutdown timeout
+2023-05-07 23:27:50.423 [info] [127.0.0.1][8dc0a56c][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-07 23:27:50.451 [info] [127.0.0.1][fe60f9df][ExtensionHostConnection] <2139> Extension Host Process exited with code: 0, signal: null.
+2023-05-07 23:27:50.451 [info] Last EH closed, waiting before shutting down

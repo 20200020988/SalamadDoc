@@ -1,0 +1,53 @@
+2023-05-15 16:51:15.349 [info] Log level: Info
+2023-05-15 16:51:15.349 [info] Validating found git in: "git"
+2023-05-15 16:51:15.349 [info] Using git "2.25.1" from "git"
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [70ms]
+2023-05-15 16:51:15.349 [info] > git rev-parse --git-dir --git-common-dir [12ms]
+2023-05-15 16:51:15.349 [info] Open repository: /home/vagrant
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [12ms]
+2023-05-15 16:51:15.349 [info] > git config --get commit.template [10ms]
+2023-05-15 16:51:15.349 [info] No remotes found in the git config file.
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [20ms]
+2023-05-15 16:51:15.349 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [52ms]
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [77ms]
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [62ms]
+2023-05-15 16:51:15.349 [info] > git status -z -uall [132ms]
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [111ms]
+2023-05-15 16:51:15.349 [info] > git config --get commit.template [100ms]
+2023-05-15 16:51:15.349 [info] > git rev-parse --show-toplevel [732ms]
+2023-05-15 16:51:15.349 [info] No remotes found in the git config file.
+2023-05-15 16:51:15.349 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [32ms]
+2023-05-15 16:51:15.349 [info] > git status -z -uall [140ms]
+2023-05-15 16:51:15.361 [info] > git check-ignore -v -z --stdin [17ms]
+2023-05-15 16:51:15.734 [info] > git show --textconv :myproject/myapp/templates/home.html [18ms]
+2023-05-15 16:51:15.760 [info] > git show --textconv :myproject/myapp/__init__.py [11ms]
+2023-05-15 16:51:15.762 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/templates/home.html [30ms]
+2023-05-15 16:51:15.777 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/__init__.py [18ms]
+2023-05-15 16:51:15.884 [info] > git check-ignore -v -z --stdin [4ms]
+2023-05-15 16:51:20.518 [info] No remotes found in the git config file.
+2023-05-15 16:51:20.520 [info] > git config --get commit.template [11ms]
+2023-05-15 16:51:20.522 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2023-05-15 16:51:20.566 [info] > git status -z -uall [36ms]
+2023-05-15 16:51:25.043 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/templates/home.html [9ms]
+2023-05-15 16:51:25.049 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/__init__.py [6ms]
+2023-05-15 16:51:25.067 [info] > git show --textconv :myproject/myapp/templates/home.html [8ms]
+2023-05-15 16:51:25.069 [info] > git show --textconv :myproject/myapp/__init__.py [3ms]
+2023-05-15 16:51:25.660 [info] > git config --get commit.template [4ms]
+2023-05-15 16:51:25.671 [info] No remotes found in the git config file.
+2023-05-15 16:51:25.673 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-15 16:51:25.705 [info] > git status -z -uall [23ms]
+2023-05-15 16:51:30.771 [info] No remotes found in the git config file.
+2023-05-15 16:51:30.773 [info] > git config --get commit.template [13ms]
+2023-05-15 16:51:30.774 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [4ms]
+2023-05-15 16:51:30.814 [info] > git status -z -uall [31ms]
+2023-05-15 16:51:36.377 [info] No remotes found in the git config file.
+2023-05-15 16:51:36.379 [info] > git config --get commit.template [15ms]
+2023-05-15 16:51:36.381 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [5ms]
+2023-05-15 16:51:36.440 [info] > git status -z -uall [50ms]
+2023-05-15 16:51:38.791 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/templates/home.html [16ms]
+2023-05-15 16:51:38.794 [info] > git ls-files --stage -- /home/vagrant/myproject/myapp/__init__.py [5ms]
+2023-05-15 16:51:38.817 [info] > git show --textconv :myproject/myapp/templates/home.html [8ms]
+2023-05-15 16:51:38.820 [info] > git show --textconv :myproject/myapp/__init__.py [3ms]
+2023-05-15 16:51:41.508 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-15 16:51:41.510 [info] > git config --get commit.template [21ms]
+2023-05-15 16:51:41.571 [info] > git status -z -uall [54ms]

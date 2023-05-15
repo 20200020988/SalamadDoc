@@ -10,3 +10,11 @@ ip a
 exit 
 vagrant ssh-config
 exit
+sudo nano index.html
+exit
+code .
+exit
+vagrant ssh-config
+exit
+code .
+exit
