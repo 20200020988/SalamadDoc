@@ -87,20 +87,20 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
-            <form action="{% url 'contact' %}" method="post">
+            <form action="https://formspree.io/f/xayzkkzp" method="post">
 
               {% csrf_token %}
               <div class="form-group">
-                <input type="text" name ="patient_name" class="form-control" placeholder="Your Name">
+                <input type="text" name ="Patient Name" class="form-control" placeholder="Your Name">
               </div>
               <div class="form-group">
-                <input type="text" name ="patient_email" class="form-control" placeholder="Your Email">
+                <input type="text" name ="Patient Email" class="form-control" placeholder="Your Email">
               </div>
               <div class="form-group">
-                <input type="text" name ="patient_subject" class="form-control" placeholder="Subject">
+                <input type="text" name ="Patient Subject" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="patient_message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="Patient Message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
