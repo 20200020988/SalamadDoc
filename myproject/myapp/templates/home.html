@@ -44,7 +44,7 @@
 	          <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="{% url 'doctors' %}" class="nav-link">Doctors</a></li>
 	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Make an Appointment</span></a></li>
+	          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Login</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -741,44 +741,36 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalRequestLabel">Make an Appointment</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <form action="#">
+
+            <div class="info text-center">
+              <a class="navbar-brand">Salama<span>dok</span></a>
+              <h2></h2>
+              <h5 class="modal-title" id="modalRequestLabel">Sign in</h5>
+            </div>
+
             <div class="form-group">
               <!-- <label for="appointment_name" class="text-black">Full Name</label> -->
-              <input type="text" class="form-control" id="appointment_name" placeholder="Full Name">
+              <input type="text" class="form-control" id="login_email" placeholder="Email Address">
             </div>
             <div class="form-group">
               <!-- <label for="appointment_email" class="text-black">Email</label> -->
-              <input type="text" class="form-control" id="appointment_email" placeholder="Email">
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <!-- <label for="appointment_date" class="text-black">Date</label> -->
-                  <input type="text" class="form-control appointment_date" placeholder="Date">
-                </div>    
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <!-- <label for="appointment_time" class="text-black">Time</label> -->
-                  <input type="text" class="form-control appointment_time" placeholder="Time">
-                </div>
-              </div>
+              <input type="text" class="form-control" id="login_password" placeholder="Password">
             </div>
             
+            <h2></h2>
+            <a style="color: #2f88fd" class="mb-1" href="insert page here">Forget Password?</a>
 
-            <div class="form-group">
-              <!-- <label for="appointment_message" class="text-black">Message</label> -->
-              <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+            <div class="form-rightbox">
+              <input type="submit" value="Login" class="btn btn-primary">
             </div>
-            <div class="form-group">
-              <input type="submit" value="Make an Appointment" class="btn btn-primary">
-            </div>
+
+
           </form>
         </div>
         
