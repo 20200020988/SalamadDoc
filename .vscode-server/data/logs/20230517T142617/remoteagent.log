@@ -7,3 +7,8 @@
 2023-05-17 14:26:18.323 [info] [127.0.0.1][2d1ddf4e][ManagementConnection] New connection established.
 2023-05-17 14:26:18.336 [info] [127.0.0.1][be006ca9][ExtensionHostConnection] New connection established.
 2023-05-17 14:26:18.341 [info] [127.0.0.1][be006ca9][ExtensionHostConnection] <72004> Launched Extension Host Process.
+2023-05-17 14:30:13.968 [info] [127.0.0.1][2d1ddf4e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-17 14:30:14.010 [info] [127.0.0.1][be006ca9][ExtensionHostConnection] <72004> Extension Host Process exited with code: 0, signal: null.
+2023-05-17 14:30:14.010 [info] Cancelling previous shutdown timeout
+2023-05-17 14:30:14.010 [info] Last EH closed, waiting before shutting down
+2023-05-17 14:35:14.011 [info] Last EH closed, shutting down
