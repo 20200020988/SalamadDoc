@@ -44,10 +44,16 @@
 	          <li class="nav-item"><a href="{% url 'services' %}" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="{% url 'doctors' %}" class="nav-link">Doctors</a></li>
 	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalRequest"><span>Login</span></a></li>
+	          <li class="nav-item cta">
+
+				{% if request.user.is_authenticated %}
+					<a href="{% url 'logout' %}" class="nav-link"><span>Logout</span></a></li>
+					{% else %}
+					<a href="{% url 'login' %}" class="nav-link"><span>Login</span></a></li>
+					{% endif %}
 	        </ul>
 	      </div>
-	    </div>
+	    </div>	
 	  </nav>
     <!-- END nav -->
 
