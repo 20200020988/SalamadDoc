@@ -435,15 +435,19 @@
                   <p class="card-description">
                     Enter here the details for appointment
                   </p>
-                  <form class="forms-sample">
+
+                  <form class="forms-sample" method="post" action="{% url 'appointment_book' %}" method="post">
+
+                    {% csrf_token %}
+
                     <div class="form-group">
-                      <label for="exampleInputName1">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                      <label for="patient_name">Name</label>
+                      <input type="text" name="patient_name" class="form-control" id="patient_name" placeholder="Name">
                     </div>
 
                     <div class="form-group">
-                      <label for="exampleTextarea1">Details</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                      <label for="appointment_description">Details</label>
+                      <textarea class="form-control" name="appointment_description" id="appointment_description" rows="4"></textarea>
                     </div>
 
                     <div class="form-group">
@@ -459,7 +463,7 @@
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
 
 
-                    <button type="submit" class="btn btn-light" >Cancel</button>
+                    <button class="btn btn-light" >Cancel</button>
 
                   </form>
                 </div>

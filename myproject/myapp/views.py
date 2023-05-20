@@ -9,6 +9,9 @@ from django.contrib.auth.models import Group
 from .forms import CreateUserForm
 from .decorators import unauthenticated_user, allowed_users
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from .models import Appointment
+
 
 
 def home (request):
@@ -37,6 +40,8 @@ def scheduledsession (request):
     return render(request, 'scheduledsession.html', {})
 def appointmentbook (request):
     return render(request, 'appointmentbook.html', {})
+
+
 
 def register (request):
     form = CreateUserForm()
@@ -79,3 +84,25 @@ def logoutUser(request):
 @allowed_users(allowed_roles=['patient'])
 def dashboard(request):
     return render(request, 'dashboard.html', {})
+
+def appointment_book(request):
+    if request.method == 'POST':
+        patient_name = request.POST.get('patient_name')
+        doctor_name = request.POST.get('doctor_name')
+        appointment_date = request.POST.get('appointment_date')
+        appointment_description = request.POST.get('appointment_description')
+        # Get other form fields as needed
+
+        appointment = Appointment(
+            patient_name=patient_name,
+            doctor_name=doctor_name,
+            appointment_date=appointment_date,
+            appointment_description = appointment_description,
+            
+            # Assign values to other fields as needed
+        )
+        appointment.save()  # Save the appointment to the database
+
+        return redirect('appointment_book')  # Redirect to the same page after saving
+
+    return render(request, 'appointmentbook.html')
