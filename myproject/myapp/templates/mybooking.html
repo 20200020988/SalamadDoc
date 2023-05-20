@@ -390,7 +390,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'scheduledsession' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
-              <span class="menu-title">Scheduled Sessions</span>
+              <span class="menu-title">Appointments</span>
             </a>
           </li>
 
@@ -451,15 +451,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                        
+                        {% for id in appointments %}
                         <tr>
                           <td class="py-1">
                             <img src="../../images/faces/face1.jpg" alt="image">
                           </td>
                           <td>
-                            Herman Beck
+                            {{id.patient_name}}
                           </td>
                           <td>
-                            $ 77.99
+                            {{id.appointment_description}}
                           </td>
                           <th>
                             Specialties
@@ -469,6 +471,7 @@
                             <button type="button" class="btn btn-danger btn-rounded btn-fw">Cancel Appointment</button>
                           </td>
                         </tr>
+                        {% endfor %}
                         
                         <tr>
                           <td class="py-1">
