@@ -487,3 +487,36 @@ stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
 [10:37:24] Extracting extension completed. ms-python.vscode-pylance
 [10:37:24] Extension installed successfully: ms-python.python
 [10:37:24] Extension installed successfully: ms-python.vscode-pylance
+rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
+stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 8000
+}
+rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
+stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 8000
+}
+rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
+stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 8000
+}

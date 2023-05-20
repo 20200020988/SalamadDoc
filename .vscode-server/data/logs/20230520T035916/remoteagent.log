@@ -164,3 +164,9 @@
 2023-05-20 10:37:24.315 [info] Extracting extension completed. ms-python.vscode-pylance
 2023-05-20 10:37:24.340 [info] Extension installed successfully: ms-python.python
 2023-05-20 10:37:24.341 [info] Extension installed successfully: ms-python.vscode-pylance
+2023-05-20 14:52:05.840 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-20 14:52:05.861 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-20 14:52:05.862 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)

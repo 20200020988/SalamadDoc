@@ -42,6 +42,7 @@ def appointmentbook (request):
     return render(request, 'appointmentbook.html', {})
 
 
+
 def register (request):
     form = CreateUserForm()
     if request.method == 'POST':

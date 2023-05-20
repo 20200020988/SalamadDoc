@@ -4,7 +4,7 @@ from myapp.forms import CreateUserForm
 class TestForms(unittest.TestCase):
     def test_create_user_form_valid_data(self):
         form_data = {
-            'username': 'test1',
+            'username': 'testuser',
             'email': 'test@example.com',
             'password1': 'testpassword',
             'password2': 'testpassword',

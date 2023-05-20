@@ -16,4 +16,4 @@ class HomeViewTest(unittest.TestCase):
         
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content.decode('utf-8'), render(response.request, 'home.html', {}).content.decode('utf-8'))
-    
+        
