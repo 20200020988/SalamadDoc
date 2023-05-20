@@ -29,9 +29,6 @@ def services (request):
 def doctors (request):
     return render(request, 'doctors.html', {})
 
-def dashboard (request):
-    return render(request, 'dashboard.html', {})
-
 def alldoctors (request):
     return render(request, 'alldoctors.html', {})
 def mybooking (request):
