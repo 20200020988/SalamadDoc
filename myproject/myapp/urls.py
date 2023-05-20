@@ -12,6 +12,7 @@ urlpatterns = [
    path('alldoctors.html', views.alldoctors, name="alldoctors"),
    path('mybooking.html', views.mybooking, name="mybooking"),
    path('scheduledsession.html', views.scheduledsession, name="scheduledsession"),
+   path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
 
    
    path('login.html', views.loginPage, name="login"),

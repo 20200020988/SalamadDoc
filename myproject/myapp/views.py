@@ -35,6 +35,8 @@ def mybooking (request):
     return render(request, 'mybooking.html', {})   
 def scheduledsession (request):
     return render(request, 'scheduledsession.html', {})
+def appointmentbook (request):
+    return render(request, 'appointmentbook.html', {})
 
 def register (request):
     form = CreateUserForm()
