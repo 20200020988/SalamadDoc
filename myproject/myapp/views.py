@@ -24,6 +24,9 @@ def services (request):
 def doctors (request):
     return render(request, 'doctors.html', {})
 
+def dashboard (request):
+    return render(request, 'dashboard.html', {})
+
 def register (request):
     form = CreateUserForm()
     if request.method == 'POST':
