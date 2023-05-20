@@ -26,6 +26,13 @@ def doctors (request):
 def dashboard (request):
     return render(request, 'dashboard.html', {})
 
+def alldoctors (request):
+    return render(request, 'alldoctors.html', {})
+def mybooking (request):
+    return render(request, 'mybooking.html', {})   
+def scheduledsession (request):
+    return render(request, 'scheduledsession.html', {})
+
 def register (request):
     form = CreateUserForm()
     if request.method == 'POST':

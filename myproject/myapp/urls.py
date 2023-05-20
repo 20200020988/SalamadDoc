@@ -9,6 +9,10 @@ urlpatterns = [
    path('doctors.html', views.doctors, name="doctors"),
    path('register.html', views.register, name="register"),
    path('dashboard.html', views.dashboard, name="dashboard"),
+   path('alldoctors.html', views.alldoctors, name="alldoctors"),
+   path('mybooking.html', views.mybooking, name="mybooking"),
+   path('scheduledsession.html', views.scheduledsession, name="scheduledsession"),
+
    
    path('login.html', views.loginPage, name="login"),
    path('logout/', views.logoutUser, name="logout"),
