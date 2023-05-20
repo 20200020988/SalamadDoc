@@ -396,7 +396,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'mybooking' %}">
+            <a class="nav-link" href="{% url 'appointment_bookingDetails' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
               <span class="menu-title">My Bookings</span>
             </a>
@@ -417,9 +417,22 @@
               <div style="padding: 5px;"></div>
               <h1 class="h1">Scheduled Session | Calendar View</h1>
 
-              <a class="py-1" href="{% url 'appointmentbook' %}">
-                <button type="button" class="btn btn-dark btn-lg btn-block">Add Appointment</button>
-              </a>
+              <div class="template-demo">
+
+                <a class="py-1" href="{% url 'appointmentbook' %}">
+                  <button type="button" class="btn btn-dark btn-lg btn-block">Add Appointment</button>
+                </a>
+
+                <div style="padding: 10px;"></div>
+
+                <a class="py-1" href="{% url 'appointment_bookingDetails' %}">
+                  <button type="button" class="btn btn-primary btn-lg btn-block">View Appointments
+                  </button>
+                </a>
+
+             </div>
+
+              
               
               <div style="padding: 10px;"></div>
 
@@ -427,79 +440,8 @@
             </div>    
         </div>  
           
-          
-        <div style="padding: 20px;"></div>
-
           <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Striped Table</h4>
-                  <p class="card-description">
-                    Add class <code>.table-striped</code>
-                  </p>
-                  <div class="table-responsive">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>
-                            User
-                          </th>
-                          <th>
-                            Doctor's Name
-                          </th>
-                          <th>
-                            Email
-                          </th>
-                          <th>
-                            Specialties
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face1.jpg" alt="image">
-                          </td>
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <th>
-                            Specialties
-                          </th>
-                          <td>
-                            <button type="button" class="btn btn-info btn-rounded btn-fw">View Doctor</button>
-                            <button type="button" class="btn btn-secondary btn-rounded btn-fw">View Sessions</button>
-                          </td>
-                        </tr>
-                        
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face2.jpg" alt="image">
-                          </td>
-                          <td>
-                            Messsy Adam
-                          </td>
-                          <td>
-                            $245.30
-                          </td>
-                          <th>
-                            Specialties
-                          </th>
-                          <td>
-                            <button type="button" class="btn btn-info btn-rounded btn-fw">View Doctor</button>
-                            <button type="button" class="btn btn-secondary btn-rounded btn-fw">View Sessions</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
           <div class="row">
 

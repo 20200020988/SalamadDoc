@@ -81,7 +81,7 @@ def logoutUser(request):
 def dashboard(request):
     return render(request, 'dashboard.html', {})
 
-def appointment_book(request):
+def appointment_bookingDetails(request):
     if request.method == 'POST':
         patient_name = request.POST.get('patient_name')
         doctor_name = request.POST.get('doctor_name')
@@ -99,6 +99,13 @@ def appointment_book(request):
         )
         appointment.save()  # Save the appointment to the database
 
-        return redirect('appointment_book')  # Redirect to the same page after saving
+        return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
 
-    return render(request, 'appointmentbook.html')
+    appointments = Appointment.objects.all()
+
+    return render(request, 'mybooking.html', {'appointments': appointments})
+
+def delete_appointment(request, appointment_id):
+    appointment = Appointment.objects.get(id=appointment_id)
+    appointment.delete()
+    return redirect('appointment_bookingDetails')  # Redirect to the page displaying the table

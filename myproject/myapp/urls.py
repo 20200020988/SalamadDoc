@@ -18,6 +18,8 @@ urlpatterns = [
    path('login.html', views.loginPage, name="login"),
    path('logout/', views.logoutUser, name="logout"),
    
-   path('appointment_book/', views.appointment_book, name='appointment_book'),
+   path('appointment_bookingDetails/', views.appointment_bookingDetails, name='appointment_bookingDetails'),
+   
+   path('delete_appointment/<int:appointment_id>/', views.delete_appointment, name='delete_appointment'),
    
 ]
