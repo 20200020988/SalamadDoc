@@ -74,7 +74,7 @@
       </div>
     </nav>
     <!-- partial -->
-    
+
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
@@ -290,7 +290,7 @@
             <div class="card-body">
 
               <div style="padding: 10px;"></div>
-              <h1 class="h1">List of Doctors</h1>
+              <h1 class="h1">List Of Patients</h1>
 
               <div style="padding: 10px;"></div>
 
@@ -303,53 +303,30 @@
         <div class="col-lg-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Striped Table</h4>
+              <h4 class="card-title">Your Patients</h4>
               <p class="card-description">
-                Add class <code>.table-striped</code>
+               Here is a list of your patients
               </p>
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
                     <tr>
                       <th>
-                        User
+                        Picture
                       </th>
                       <th>
-                        Doctor's Name
+                        Patient's Name
                       </th>
                       <th>
                         Email
                       </th>
                       <th>
-                        Specialties
+                        Address
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td class="py-1">
-                        <img src="../../images/faces/face1.jpg" alt="image">
-                      </td>
-                      <td>
-                        Herman Beck
-                      </td>
-                      <td>
-                        $ 77.99
-                      </td>
-                      <th>
-                        Specialties
-                      </th>
-                      <td>
-
-                        <button type="button" class="btn btn-info btn-rounded btn-fw">View Doctor</button>
-
-                        <a class="py-1" href="{% url 'scheduledsession' %}">
-                          <button type="button" class="btn btn-secondary btn-rounded btn-fw">View Sessions</button>
-                        </a>
-                          
-                      </td>
-                    </tr>
-                    
+                  
                     <tr>
                       <td class="py-1">
                         <img src="../../images/faces/face2.jpg" alt="image">
@@ -364,7 +341,7 @@
                         Specialties
                       </th>
                       <td>
-                        <button type="button" class="btn btn-info btn-rounded btn-fw">View Doctor</button>
+                        <button type="button" class="btn btn-info btn-rounded btn-fw">View Other Details</button>
                         
                         <a class="py-1" href="{% url 'scheduledsession' %}">
                           <button type="button" class="btn btn-secondary btn-rounded btn-fw"href="{% url 'scheduledsession' %}">View Sessions</button>
@@ -372,6 +349,7 @@
 
                       </td>
                     </tr>
+                    
                   </tbody>
                 </table>
               </div>

@@ -13,13 +13,15 @@ urlpatterns = [
    path('mybooking.html', views.mybooking, name="mybooking"),
    path('scheduledsession.html', views.scheduledsession, name="scheduledsession"),
    path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
+   path('dashboardForDoctor.html', views.dashboardForDoctor, name="dashboardForDoctor"),
+   path('allPatients.html', views.allPatients, name="allPatients"),
+
 
    
    path('login.html', views.loginPage, name="login"),
    path('logout/', views.logoutUser, name="logout"),
    
    path('appointment_bookingDetails/', views.appointment_bookingDetails, name='appointment_bookingDetails'),
-   
    path('delete_appointment/<int:appointment_id>/', views.delete_appointment, name='delete_appointment'),
    
 ]

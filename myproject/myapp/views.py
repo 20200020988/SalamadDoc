@@ -37,6 +37,11 @@ def scheduledsession (request):
     return render(request, 'scheduledsession.html', {})
 def appointmentbook (request):
     return render(request, 'appointmentbook.html', {})
+def dashboardForDoctor (request):
+    return render(request, 'dashboardForDoctor.html', {})
+def allPatients (request):
+    return render(request, 'allPatients.html', {})
+
 
 
 def register (request):
@@ -103,7 +108,10 @@ def appointment_bookingDetails(request):
 
     appointments = Appointment.objects.all()
 
-    return render(request, 'mybooking.html', {'appointments': appointments})
+    context = {'appointments': appointments}
+
+    return render(request, 'mybooking.html', context)
+
 
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
