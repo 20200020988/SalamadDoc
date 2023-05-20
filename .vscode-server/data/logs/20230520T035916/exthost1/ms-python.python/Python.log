@@ -1,0 +1,76 @@
+2023-05-20 10:37:26.442 [info] Experiment 'pythonPromptNewFormatterExt' is active
+2023-05-20 10:37:26.442 [info] Experiment 'pythonPromptNewToolsExt' is active
+2023-05-20 10:37:26.442 [info] Experiment 'pythonSurveyNotification' is active
+2023-05-20 10:37:26.442 [info] Test server listening.
+2023-05-20 10:37:26.480 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-05-20 10:37:26.480 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2023-05-20 10:37:26.480 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2023-05-20 10:37:26.480 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2023-05-20 10:37:26.480 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2023-05-20 10:37:26.611 [info] > C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe -c "import sys;print(sys.executable)"
+2023-05-20 10:37:26.637 [error] Error: Command failed: C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe -c "import sys;print(sys.executable)"
+/bin/sh: 1: C:UsersKhristian: not found
+
+    at ChildProcess.exithandler (node:child_process:400:12)
+    at ChildProcess.emit (node:events:513:28)
+    at maybeClose (node:internal/child_process:1093:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5) {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: 'C:\\Users\\Khristian Nabo\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe -c "import sys;print(sys.executable)"'
+}
+2023-05-20 10:37:29.254 [info] Starting Pylance language server.
+2023-05-20 10:37:46.319 [warning] Failed to check if C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe is an executable [Error: ENOENT: no such file or directory, lstat 'C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'C:\\Users\\Khristian Nabo\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe'
+}
+2023-05-20 10:37:46.351 [info] > "C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe" -I ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+2023-05-20 10:37:46.355 [error] Error: Command failed: "C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe" -I /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+/bin/sh: 1: C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe: not found
+
+    at ChildProcess.exithandler (node:child_process:400:12)
+    at ChildProcess.emit (node:events:513:28)
+    at maybeClose (node:internal/child_process:1093:16)
+    at Socket.<anonymous> (node:internal/child_process:451:11)
+    at Socket.emit (node:events:513:28)
+    at Pipe.<anonymous> (node:net:757:14) {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: '"C:\\Users\\Khristian Nabo\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe" -I /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py'
+}
+2023-05-20 10:37:48.377 [info] > "C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe" -I ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+2023-05-20 10:37:48.380 [error] Error: Command failed: "C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe" -I /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+/bin/sh: 1: C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe: not found
+
+    at ChildProcess.exithandler (node:child_process:400:12)
+    at ChildProcess.emit (node:events:513:28)
+    at maybeClose (node:internal/child_process:1093:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5) {
+  code: 127,
+  killed: false,
+  signal: null,
+  cmd: '"C:\\Users\\Khristian Nabo\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe" -I /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py'
+}
+2023-05-20 10:37:48.381 [error] Invalid Python Path 'C:\Users\Khristian Nabo\AppData\Local\Microsoft\WindowsApps\python3.11.exe'
+2023-05-20 10:37:52.725 [info] > conda info --json
+2023-05-20 10:37:52.737 [info] Found: /bin/python3 --> /bin/python3.8
+2023-05-20 10:37:52.740 [info] Found: /bin/python3.8 --> /bin/python3.8
+2023-05-20 10:37:52.749 [info] Found: /usr/bin/python3 --> /usr/bin/python3.8
+2023-05-20 10:37:52.749 [info] Found: /usr/bin/python3.8 --> /usr/bin/python3.8
+2023-05-20 10:37:52.800 [info] > /bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+2023-05-20 10:37:52.828 [info] > /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/interpreterInfo.py
+2023-05-20 10:37:56.239 [info] Python interpreter path: /bin/python3
+2023-05-20 10:38:04.035 [info] DAP Server launched with command: /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter
+2023-05-20 10:38:06.669 [info] Send text to terminal:  /usr/bin/env /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 55829 -- /home/vagrant/myproject/tests/test_forms.py 
+2023-05-20 10:38:29.770 [info] DAP Server launched with command: /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter
+2023-05-20 10:38:31.143 [info] Send text to terminal:  /usr/bin/env /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 45807 -- /home/vagrant/myproject/tests/test_forms.py 
+2023-05-20 10:38:45.509 [info] DAP Server launched with command: /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter
+2023-05-20 10:38:46.840 [info] Send text to terminal:  /usr/bin/env /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 48783 -- /home/vagrant/myproject/tests/test_forms.py 
+2023-05-20 10:40:05.555 [info] DAP Server launched with command: /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter
+2023-05-20 10:40:06.909 [info] Send text to terminal:  /usr/bin/env /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 49027 -- /home/vagrant/myproject/myapp/tests/test_forms.py 
+2023-05-20 10:41:48.136 [info] DAP Server launched with command: /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter
+2023-05-20 10:41:49.433 [info] Send text to terminal:  /usr/bin/env /bin/python3 /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 42667 -- /home/vagrant/myproject/myapp/tests/test_forms.py 

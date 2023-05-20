@@ -1,0 +1,35 @@
+2023-05-20 10:37:29.221 [info] [Info  - 10:37:28 AM] (206036) Pylance language server 2023.5.30 (pyright e1b6074b) starting
+2023-05-20 10:37:29.223 [info] [Info  - 10:37:29 AM] (206036) Server root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist
+2023-05-20 10:37:29.223 [info] [Info  - 10:37:29 AM] (206036) Starting service instance "vagrant"
+2023-05-20 10:37:29.307 [info] [Warn  - 10:37:29 AM] (206036) stubPath /home/vagrant/typings is not a valid directory.
+2023-05-20 10:37:30.118 [info] [Info  - 10:37:30 AM] (206036) Found 17 source files
+2023-05-20 10:37:30.627 [info] [Info  - 10:37:30 AM] (206036) Background analysis(1) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist
+2023-05-20 10:37:30.627 [info] [Info  - 10:37:30 AM] (206036) Background analysis(1) started
+2023-05-20 10:37:31.790 [info] [Info  - 10:37:31 AM] (206036) Indexer background runner(2) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist (index)
+2023-05-20 10:37:31.790 [info] [Info  - 10:37:31 AM] (206036) Indexing(2) started
+2023-05-20 10:37:35.689 [info] [Info  - 10:37:35 AM] (206036) [BG(1)] Long operation: analyzing: /home/vagrant/myproject/myapp/forms.py (2732ms)
+2023-05-20 10:37:35.740 [info] [Info  - 10:37:35 AM] (206036) scanned(2) 90 files over 1 exec env
+2023-05-20 10:37:37.176 [info] [Info  - 10:37:37 AM] (206036) [IDX(2)] Long operation: index execution environment /home/vagrant (3354ms)
+2023-05-20 10:37:37.184 [info] [Info  - 10:37:37 AM] (206036) [IDX(2)] Long operation: index packages /home/vagrant (3376ms)
+2023-05-20 10:37:37.184 [info] [Info  - 10:37:37 AM] (206036) indexed(2) 48 files over 1 exec env
+2023-05-20 10:37:37.198 [info] [Info  - 10:37:37 AM] (206036) Indexing finished(2).
+2023-05-20 10:37:56.264 [info] [Info  - 10:37:56 AM] (206036) Setting pythonPath for service "vagrant": "/bin/python3"
+2023-05-20 10:37:56.265 [info] [Warn  - 10:37:56 AM] (206036) stubPath /home/vagrant/typings is not a valid directory.
+2023-05-20 10:37:56.307 [info] [Info  - 10:37:56 AM] (206036) Assuming Python version 3.8
+2023-05-20 10:37:56.449 [info] [Info  - 10:37:56 AM] (206036) Found 17 source files
+2023-05-20 10:37:57.331 [info] [Info  - 10:37:57 AM] (206036) Indexer background runner(3) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist (index)
+2023-05-20 10:37:57.331 [info] [Info  - 10:37:57 AM] (206036) Indexing(3) started
+2023-05-20 10:37:58.139 [info] [Info  - 10:37:58 AM] (206036) scanned(3) 90 files over 1 exec env
+2023-05-20 10:38:00.378 [info] [Info  - 10:38:00 AM] (206036) indexed(3) 48 files over 1 exec env
+2023-05-20 10:38:00.383 [info] [Info  - 10:38:00 AM] (206036) Indexing finished(3).
+2023-05-20 10:39:02.305 [info] [Info  - 10:39:02 AM] (206036) Found 17 source files
+2023-05-20 10:43:55.057 [info] [Info  - 10:43:55 AM] (206036) Found 17 source files
+2023-05-20 10:45:00.493 [info] [Info  - 10:45:00 AM] (206036) Found 17 source files
+2023-05-20 10:49:08.363 [info] [Info  - 10:49:08 AM] (206036) Found 17 source files
+2023-05-20 10:52:50.364 [info] [Info  - 10:52:50 AM] (206036) Found 17 source files
+2023-05-20 10:53:14.989 [info] [Info  - 10:53:14 AM] (206036) Found 18 source files
+2023-05-20 10:55:26.789 [info] [Info  - 10:55:26 AM] (206036) Found 19 source files
+2023-05-20 10:58:03.043 [info] [Info  - 10:58:03 AM] (206036) Found 18 source files
+2023-05-20 11:13:28.326 [info] [Info  - 11:13:28 AM] (206036) Found 17 source files
+2023-05-20 11:37:58.927 [info] [Info  - 11:37:58 AM] (206036) Found 18 source files
+2023-05-20 11:59:34.388 [info] [Info  - 11:59:34 AM] (206036) Found 19 source files
