@@ -1,8 +1,8 @@
-import unittest
+from django.test import TestCase
 from django.urls import reverse, resolve
 from myapp.views import home, contact, about, services, doctors, register, dashboard, alldoctors, mybooking, scheduledsession, login, logout
 
-class TestUrls(unittest.TestCase):
+class TestUrls(TestCase):
     def test_home_url_is_resolved(self):
         url = reverse('home')
         resolver_match = resolve(url)
@@ -31,3 +31,27 @@ class TestUrls(unittest.TestCase):
     def test_register_url_is_resolved(self):
         url = reverse('register')
         resolver_match = resolve(url)
+        self.assertEqual(resolver_match.func, register)
+
+    def test_dashboard_url_is_resolved(self):
+        url = reverse('dashboard')
+        resolver_match = resolve(url)
+        self.assertEqual(resolver_match.func, dashboard)
+
+    def test_alldoctors_url_is_resolved(self):
+        url = reverse('alldoctors')
+        resolver_match = resolve(url)
+        self.assertEqual(resolver_match.func, alldoctors)
+
+    def test_mybooking_url_is_resolved(self):
+        url = reverse('mybooking')
+        resolver_match = resolve(url)
+        self.assertEqual(resolver_match.func, mybooking)
+
+    def test_scheduledsession_url_is_resolved(self):
+        url = reverse('scheduledsession')
+        resolver_match = resolve(url)
+        self.assertEqual(resolver_match.func, scheduledsession)
+        
+   # login and logout urls are to be tested in test_views
+        

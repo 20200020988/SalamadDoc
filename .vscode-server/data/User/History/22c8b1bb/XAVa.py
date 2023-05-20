@@ -1,4 +1,4 @@
-import unittest
+from django.test import unittest
 from myapp.forms import CreateUserForm
 
 class TestForms(unittest.TestCase):
@@ -11,3 +11,5 @@ class TestForms(unittest.TestCase):
         }
         form = CreateUserForm(data=form_data)
         self.assertTrue(form.is_valid())
+        
+        

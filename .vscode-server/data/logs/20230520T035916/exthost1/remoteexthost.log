@@ -961,3 +961,8 @@
 2023-05-20 13:12:20.208 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8910
 2023-05-20 13:12:25.687 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8910
 2023-05-20 13:12:30.896 [warning] [Decorations] CAPPING events from decorations provider vscode.git 8910
+2023-05-20 13:32:26.662 [error] [ms-python.python] provider FAILED
+2023-05-20 13:32:26.662 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
