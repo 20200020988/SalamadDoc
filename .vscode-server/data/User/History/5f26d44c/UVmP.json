@@ -1,0 +1,9 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "remote.SSH.remotePlatform": {
+        "default": "linux"
+    },
+    "python.venvPath": "\"C:\\\\Users\\\\Khristian Nabo\\\\Desktop\\\\kyle's files\\\\Test Projects\\\\env\\\\Scripts\\\\activate.bat\""
+}

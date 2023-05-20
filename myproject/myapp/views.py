@@ -3,9 +3,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
 
 # Create your views here.
 from .forms import CreateUserForm
+from .decorators import unauthenticated_user, allowed_users
+from django.contrib.auth.decorators import login_required
 
 
 def home (request):
@@ -38,13 +41,17 @@ def register (request):
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
-            User = form.save()
-            user = form.cleaned_data.get('username')
-            messages.success(request, 'Account was created for ' + user)
-            return redirect('login')
             
-    return render(request, 'register.html', {'form':form}) 
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            group = Group.objects.get(name='patient') 
+            user.groups.add(group)
+            messages.success(request, 'Account was created for ' + username)
+            
+            return redirect('login')
+    return render(request, 'register.html', {'form': form})
 
+@unauthenticated_user
 def loginPage (request):
     
     if request.method == 'POST':
@@ -55,7 +62,8 @@ def loginPage (request):
         
         if user is not None:
             login(request, user)
-            return redirect('home')
+            if user.groups.filter(name='patient').exists():
+                return redirect('dashboard')
         else:
             messages.info(request, 'Username or Password is incorrect')
         
@@ -64,3 +72,8 @@ def loginPage (request):
 def logoutUser(request):
     logout(request)
     return redirect('home')
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['patient'])
+def dashboard(request):
+    return render(request, 'dashboard.html', {})
