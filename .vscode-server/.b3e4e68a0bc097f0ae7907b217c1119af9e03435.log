@@ -5,18 +5,18 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to 127.0.0.1:43577 (IPv4)
-Extension host agent listening on 43577
+Server bound to 127.0.0.1:34089 (IPv4)
+Extension host agent listening on 34089
 
-[13:25:53] 
-
-
+[03:59:16] 
 
 
-[13:25:53] Extension host agent started.
-[13:25:53] [127.0.0.1][445e2ce8][ManagementConnection] New connection established.
-[13:25:53] [127.0.0.1][6b92abfa][ExtensionHostConnection] New connection established.
-[13:25:53] [127.0.0.1][6b92abfa][ExtensionHostConnection] <80113> Launched Extension Host Process.
+
+
+[03:59:16] Extension host agent started.
+[03:59:17] [127.0.0.1][7f374e44][ManagementConnection] New connection established.
+[03:59:17] [127.0.0.1][041e0506][ExtensionHostConnection] New connection established.
+[03:59:17] [127.0.0.1][041e0506][ExtensionHostConnection] <149634> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -92,7 +92,7 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at process.emit (node:events:513:28)
     at emit (node:internal/child_process:939:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[13:25:57] Error [CodeExpectedError]: Could not find pty on pty host
+[03:59:21] Error [CodeExpectedError]: Could not find pty on pty host
     at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
     at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
     at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
@@ -121,7 +121,7 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at process.emit (node:events:513:28)
     at emit (node:internal/child_process:939:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[13:25:57] Error [CodeExpectedError]: Could not find pty on pty host
+[03:59:21] Error [CodeExpectedError]: Could not find pty on pty host
     at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
     at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
     at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
@@ -136,4 +136,4 @@ stack trace: CodeExpectedError: Could not find pty on pty host
     at emit (node:internal/child_process:939:14)
     at processTicksAndRejections (node:internal/process/task_queues:84:21)
 New EH opened, aborting shutdown
-[13:30:53] New EH opened, aborting shutdown
+[04:04:16] New EH opened, aborting shutdown
