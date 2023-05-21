@@ -34,19 +34,33 @@ def doctors (request):
 
 def alldoctors (request):
     return render(request, 'alldoctors.html', {})
+
 def mybooking (request):
     return render(request, 'mybooking.html', {})   
+
 def scheduledsession (request):
     return render(request, 'scheduledsession.html', {})
+
 def appointmentbook (request):
     return render(request, 'appointmentbook.html', {})
+
 def dashboardForDoctor (request):
     return render(request, 'dashboardForDoctor.html', {})
+
 def allPatients (request):
     return render(request, 'allPatients.html', {})
+
 def appointmentspagedoctors (request):
     return render(request, 'appointmentspagedoctors.html', {})
 
+def dashboardsecretary (request):
+    return render(request, 'dashboardsecretary.html', {})
+
+def patientsecretary (request):
+    return render(request, 'patientsecretary.html', {})
+
+def appointmentspagesecretary (request):
+    return render(request, 'appointmentspagesecretary.html', {})
 
 
 def register (request):

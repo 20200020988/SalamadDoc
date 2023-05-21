@@ -42,3 +42,23 @@
     at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
     at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
     at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-21 14:22:34.434 [error] [ms-python.python] provider FAILED
+2023-05-21 14:22:34.434 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-21 14:30:46.633 [error] [ms-python.python] provider FAILED
+2023-05-21 14:30:46.633 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-21 14:36:56.757 [error] [ms-python.python] provider FAILED
+2023-05-21 14:36:56.757 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-21 14:43:49.265 [error] [ms-python.python] provider FAILED
+2023-05-21 14:43:49.265 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
