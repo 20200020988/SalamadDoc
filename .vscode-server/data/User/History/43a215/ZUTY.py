@@ -45,32 +45,22 @@ def appointmentbook (request):
     return render(request, 'appointmentbook.html', {})
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['doctor'])
+@allowed_users(allowed_roles=['doctors'])
 def dashboardForDoctor (request):
     return render(request, 'dashboardForDoctor.html', {})
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['doctor'])
 def allPatients (request):
     return render(request, 'allPatients.html', {})  
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['doctor'])
 def appointmentspagedoctors (request):
     return render(request, 'appointmentspagedoctors.html', {})
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['secretary'])
 def dashboardsecretary (request):
     return render(request, 'dashboardsecretary.html', {})
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['secretary'])
 def patientsecretary (request):
     return render(request, 'patientsecretary.html', {})
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['secretary'])
 def appointmentspagesecretary (request):
     return render(request, 'appointmentspagesecretary.html', {})
 
@@ -103,10 +93,8 @@ def loginPage (request):
             login(request, user)
             if user.groups.filter(name='patient').exists():
                 return redirect('dashboard')
-            if user.groups.filter(name='doctor').exists():
-                return redirect('dashboardForDoctor')
-            if user.groups.filter(name='secretary').exists():
-                return redirect('dashboardsecretary')
+            if user.groups.filter(name='doctors').exists():
+                return redirect('dashboardForDoctors')
         else:
             messages.info(request, 'Username or Password is incorrect')
         
