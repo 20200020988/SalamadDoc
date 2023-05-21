@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 
 class Appointment(models.Model):
@@ -11,8 +12,13 @@ class Appointment(models.Model):
     appointment_date=models.DateField(auto_now=True)
 
     appointment_description=models.TextField(max_length=500)
-    account = models.ForeignKey(User, on_delete=models.CASCADE)
+    account = models.ForeignKey(User, on_delete=models.CASCADE, default=None, editable=False, null=True)
 
-    
+    def save(self, *args, **kwargs):
+        request = kwargs.pop('request', None)  # Get the request object from kwargs
+        if request:
+            self.account = request.user
+        super().save(*args, **kwargs)
+        
 def __str__(self):
     return self.patient_name

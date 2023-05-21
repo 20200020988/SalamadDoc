@@ -92,7 +92,6 @@ def dashboard(request):
 
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
-    
     if request.method == 'POST':
         patient_name = request.POST.get('patient_name')
         doctor_name = request.POST.get('doctor_name')
@@ -108,7 +107,8 @@ def appointment_bookingDetails(request):
             
             # Assign values to other fields as needed
         )
-        appointment.save()  # Save the appointment to the database
+        
+        appointment.save(request=request)  # Pass the request object to the save() method
 
         return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
@@ -133,3 +133,4 @@ def appointment_list(request):
     appointments = Appointment.objects.all()  # Retrieve all appointments from the database
     context = {'appointments': appointments}  # Create a context dictionary with the appointments data
     return render(request, 'appointmentspagedoctors.html', context)
+
