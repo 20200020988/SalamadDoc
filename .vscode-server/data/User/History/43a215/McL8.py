@@ -56,11 +56,14 @@ def appointmentspagedoctors (request):
 def dashboardsecretary (request):
     return render(request, 'dashboardsecretary.html', {})
 
-def patientsecretary (request):
-    return render(request, 'patientsecretary.html', {})
+def allPatientsSecretary (request):
+    return render(request, 'allPatientsSecretary.html', {})
 
 def appointmentspagesecretary (request):
     return render(request, 'appointmentspagesecretary.html', {})
+
+
+
 
 
 def register (request):

@@ -59,9 +59,6 @@ def dashboardsecretary (request):
 def patientsecretary (request):
     return render(request, 'patientsecretary.html', {})
 
-def appointmentspagesecretary (request):
-    return render(request, 'appointmentspagesecretary.html', {})
-
 
 def register (request):
     form = CreateUserForm()
