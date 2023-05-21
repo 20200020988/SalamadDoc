@@ -15,7 +15,7 @@ urlpatterns = [
    path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
    path('dashboardForDoctor.html', views.dashboardForDoctor, name="dashboardForDoctor"),
    path('allPatients.html', views.allPatients, name="allPatients"),
-   path('dashboardsecretary.html', views.dashboardsecretary, name="dashboardsecretary"),
+   path('dashboardsecretary.html', views.dashboardForDoctor, name="dashboardsecretary"),
    
    #APPOINTMENT LIST
    path('appointmentspagedoctors.html', views.appointment_list, name="appointmentspagedoctors"),
