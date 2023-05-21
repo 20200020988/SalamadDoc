@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 
+
 # Create your views here.
 from .forms import CreateUserForm
 from .decorators import unauthenticated_user, allowed_users
@@ -117,3 +118,4 @@ def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
     appointment.delete()
     return redirect('appointment_bookingDetails')  # Redirect to the page displaying the table
+
