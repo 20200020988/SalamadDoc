@@ -5,18 +5,18 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to 127.0.0.1:34089 (IPv4)
-Extension host agent listening on 34089
+Server bound to 127.0.0.1:37041 (IPv4)
+Extension host agent listening on 37041
 
-[03:59:16] 
-
-
+[05:30:07] 
 
 
-[03:59:16] Extension host agent started.
-[03:59:17] [127.0.0.1][7f374e44][ManagementConnection] New connection established.
-[03:59:17] [127.0.0.1][041e0506][ExtensionHostConnection] New connection established.
-[03:59:17] [127.0.0.1][041e0506][ExtensionHostConnection] <149634> Launched Extension Host Process.
+
+
+[05:30:08] Extension host agent started.
+[05:30:08] [127.0.0.1][b677a1da][ManagementConnection] New connection established.
+[05:30:08] [127.0.0.1][b4b14dee][ExtensionHostConnection] New connection established.
+[05:30:08] [127.0.0.1][b4b14dee][ExtensionHostConnection] <271403> Launched Extension Host Process.
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -77,70 +77,19 @@ Extension host agent listening on 34089
     'fi\n' +
     'exit 0'
 ]
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[03:59:21] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[03:59:21] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+[05:30:21] Error: getaddrinfo EAI_AGAIN mobile.events.data.microsoft.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26) {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'mobile.events.data.microsoft.com'
+}
 New EH opened, aborting shutdown
-[04:04:16] New EH opened, aborting shutdown
+[05:35:08] New EH opened, aborting shutdown
 rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
 stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:11] Error: connect ECONNREFUSED 127.0.0.1:8000
+[05:52:16] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
   errno: -111,
   code: 'ECONNREFUSED',
@@ -151,7 +100,7 @@ stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
 rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
 stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:11] Error: connect ECONNREFUSED 127.0.0.1:8000
+[06:24:07] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
   errno: -111,
   code: 'ECONNREFUSED',
@@ -162,7 +111,7 @@ stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
 rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
 stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:11] Error: connect ECONNREFUSED 127.0.0.1:8000
+[06:26:25] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
   errno: -111,
   code: 'ECONNREFUSED',
@@ -173,7 +122,7 @@ stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
 rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
 stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:11] Error: connect ECONNREFUSED 127.0.0.1:8000
+[06:28:39] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
   errno: -111,
   code: 'ECONNREFUSED',
@@ -184,335 +133,7 @@ stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
 rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
 stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:11] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:29] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:29] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:03:29] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[06:06:44] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-[node.js fs] readdir with filetypes failed with error:  [Error: ENOENT: no such file or directory, scandir '/home/vagrant/static/myapp/icons'] {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'scandir',
-  path: '/home/vagrant/static/myapp/icons'
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[08:23:38] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[08:28:21] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-[08:56:22] [127.0.0.1][7f374e44][ManagementConnection] The client has reconnected.
-[08:56:22] [127.0.0.1][041e0506][ExtensionHostConnection] The client has reconnected.
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateIcon (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2702)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
-stack trace: CodeExpectedError: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-[08:56:23] Error [CodeExpectedError]: Could not find pty on pty host
-    at E.L (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:6871)
-    at E.updateTitle (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:28:2652)
-    at Object.call (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:17:5093)
-    at h.s (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:5445)
-    at h.q (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4936)
-    at /home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:15:4341
-    at c.invoke (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
-    at g.deliver (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
-    at t.fire (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
-    at process.U (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/platform/terminal/node/ptyHostMain.js:9:21145)
-    at process.emit (node:events:513:28)
-    at emit (node:internal/child_process:939:14)
-    at processTicksAndRejections (node:internal/process/task_queues:84:21)
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[08:58:45] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[08:58:45] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[08:58:45] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-[10:33:57] Getting Manifest... ms-python.python
-[10:34:01] Installing extension: ms-python.python
-[10:34:04] Getting Manifest... ms-python.vscode-pylance
-[10:34:09] Installing extension: ms-python.vscode-pylance ms-python.python
-[10:34:39] Extension signature is verified: ms-python.python
-[10:34:45] Extracted extension to /home/vagrant/.vscode-server/extensions/.d58f063f-b5e1-4109-a24a-f495b59024e0: ms-python.python
-[10:34:45] Renamed to /home/vagrant/.vscode-server/extensions/ms-python.python-2023.8.0
-[10:34:45] Extracting extension completed. ms-python.python
-[10:37:14] Extension signature is verified: ms-python.vscode-pylance
-[10:37:24] Extracted extension to /home/vagrant/.vscode-server/extensions/.94e3692d-9d2c-4c55-9c40-082b3f9eec05: ms-python.vscode-pylance
-[10:37:24] Renamed to /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30
-[10:37:24] Extracting extension completed. ms-python.vscode-pylance
-[10:37:24] Extension installed successfully: ms-python.python
-[10:37:24] Extension installed successfully: ms-python.vscode-pylance
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
-  errno: -111,
-  code: 'ECONNREFUSED',
-  syscall: 'connect',
-  address: '127.0.0.1',
-  port: 8000
-}
-rejected promise not handled within 1 second: Error: connect ECONNREFUSED 127.0.0.1:8000
-stack trace: Error: connect ECONNREFUSED 127.0.0.1:8000
-    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
-[14:52:05] Error: connect ECONNREFUSED 127.0.0.1:8000
+[08:05:47] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
   errno: -111,
   code: 'ECONNREFUSED',

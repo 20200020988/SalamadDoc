@@ -1,0 +1,22 @@
+2023-05-21 05:30:08.001 [info] 
+
+
+
+
+2023-05-21 05:30:08.064 [info] Extension host agent started.
+2023-05-21 05:30:08.361 [info] [127.0.0.1][b677a1da][ManagementConnection] New connection established.
+2023-05-21 05:30:08.384 [info] [127.0.0.1][b4b14dee][ExtensionHostConnection] New connection established.
+2023-05-21 05:30:08.410 [info] [127.0.0.1][b4b14dee][ExtensionHostConnection] <271403> Launched Extension Host Process.
+2023-05-21 05:30:21.635 [error] Error: getaddrinfo EAI_AGAIN mobile.events.data.microsoft.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+2023-05-21 05:35:08.070 [info] New EH opened, aborting shutdown
+2023-05-21 05:52:16.012 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-21 06:24:07.225 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-21 06:26:25.425 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-21 06:28:39.590 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-21 08:05:47.760 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)

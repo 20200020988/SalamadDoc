@@ -1,0 +1,18 @@
+2023-05-21 02:14:12.188 [info] [Info  - 2:14:12 AM] (257036) Pylance language server 2023.5.30 (pyright e1b6074b) starting
+2023-05-21 02:14:12.209 [info] [Info  - 2:14:12 AM] (257036) Server root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist
+2023-05-21 02:14:12.283 [info] [Info  - 2:14:12 AM] (257036) Starting service instance "vagrant"
+2023-05-21 02:14:13.561 [info] [Info  - 2:14:13 AM] (257036) Background analysis(1) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist
+2023-05-21 02:14:13.567 [info] [Info  - 2:14:13 AM] (257036) Background analysis(1) started
+2023-05-21 02:14:13.713 [info] [Info  - 2:14:13 AM] (257036) Setting pythonPath for service "vagrant": "/bin/python3"
+2023-05-21 02:14:13.831 [info] [Warn  - 2:14:13 AM] (257036) stubPath /home/vagrant/typings is not a valid directory.
+2023-05-21 02:14:13.847 [info] [Info  - 2:14:13 AM] (257036) Assuming Python version 3.8
+2023-05-21 02:14:14.244 [info] [Info  - 2:14:14 AM] (257036) Found 21 source files
+2023-05-21 02:14:15.702 [info] [Info  - 2:14:15 AM] (257036) Indexer background runner(2) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist (index)
+2023-05-21 02:14:15.856 [info] [Info  - 2:14:15 AM] (257036) Indexing(2) started
+2023-05-21 02:14:16.831 [info] [Info  - 2:14:16 AM] (257036) [BG(1)] Long operation: analyzing: /home/vagrant/myproject/myapp/tests/test_views.py (2540ms)
+2023-05-21 02:14:18.221 [info] [Info  - 2:14:18 AM] (257036) [IDX(2)] Long operation: scan packages /home/vagrant (2417ms)
+2023-05-21 02:14:18.226 [info] [Info  - 2:14:18 AM] (257036) scanned(2) 90 files over 1 exec env
+2023-05-21 02:14:22.491 [info] [Info  - 2:14:22 AM] (257036) [IDX(2)] Long operation: index execution environment /home/vagrant (4302ms)
+2023-05-21 02:14:22.493 [info] [Info  - 2:14:22 AM] (257036) [IDX(2)] Long operation: index packages /home/vagrant (4342ms)
+2023-05-21 02:14:22.494 [info] [Info  - 2:14:22 AM] (257036) indexed(2) 48 files over 1 exec env
+2023-05-21 02:14:22.505 [info] [Info  - 2:14:22 AM] (257036) Indexing finished(2).
