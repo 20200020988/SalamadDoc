@@ -432,7 +432,7 @@
                       <div class="d-flex justify-content-between align-items-center mb-2">
                         <p class="mb-0 text-muted">Total Doctor</p>
                       </div>
-                      <h2>3</h2>
+                      <h2>{{ user_count }}</h2>
                       <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
                     </div>
                   </div>
@@ -444,7 +444,7 @@
                   <div class="card">
                     <div class="card-body d-flex flex-column justify-content-between">
                       <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Patient</p>
+                        <p class="mb-0 text-muted">Total Booking</p>
                       </div>
                       <h2>2</h2>
                       <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
@@ -455,31 +455,20 @@
               </div>
               <div class="row h-100">
 
-                <div class="col-md-6 stretch-card grid-margin grid-margin-md-0">
+                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
 
                   <div class="card">
                     <div class="card-body d-flex flex-column justify-content-between">
                       <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Booking</p>
+                        <p class="mb-0 text-muted">Upcoming Booking Schedule</p>
                       </div>
-                      <h2>5</h2>
+                      <h1>5</h1>
                       <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
                     </div>
                   </div>
 
                 </div>
                 <div class="col-md-6 stretch-card">
-
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">New Booking</p>
-                      </div>
-                      <h2>1</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -547,56 +536,6 @@
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Expenses</p>
-                      <h1 class="mb-0">8742</h1>
-                    </div>
-                    <i class="typcn typcn-briefcase icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="expense-chart" height="80"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Budget</p>
-                      <h1 class="mb-0">47,840</h1>
-                    </div>
-                    <i class="typcn typcn-chart-pie icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="budget-chart" height="80"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Balance</p>
-                      <h1 class="mb-0">$7,243</h1>
-                    </div>
-                    <i class="typcn typcn-clipboard icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-
-          </div>
-
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->

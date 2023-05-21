@@ -160,3 +160,25 @@ def your_view_functionallDoctorsDragDown(request):
     users = group.user_set.all()
     return render(request, 'appointmentbook.html', {'users': users})
 
+def your_view_numberofdoctors(request):
+    group_id = 3  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    user_count = group.user_set.count()
+    return render(request, 'dashboard.html', {'user_count': user_count})
+
+def dashboard(request):
+
+    # Call your_view_numberofdoctors function
+    group_id = 3  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    user_count = group.user_set.count()
+
+    # Prepare the context data for the template
+    context = {
+        'user_count': user_count,
+        # Other context variables
+    }
+
+    # Render the template
+    return render(request, 'dashboard.html', context)
+
