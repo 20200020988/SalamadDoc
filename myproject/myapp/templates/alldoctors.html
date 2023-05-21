@@ -46,15 +46,17 @@
               <span class="nav-profile-name">Eugenia Mullins</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="typcn typcn-cog-outline text-primary"></i>
-                Settings
+              <a class="dropdown-item" href="#" id="logoutBtn">
+                  <i class="typcn typcn-eject text-primary"></i>
+                  Logout
               </a>
-              <a class="dropdown-item">
-                <i class="typcn typcn-eject text-primary"></i>
-                Logout
-              </a>
-            </div>
+          </div>
+          
+          <script>
+              document.getElementById("logoutBtn").addEventListener("click", function() {
+                  window.location.href = "{% url 'logout' %}";
+              });
+          </script>
           </li>
           <li class="nav-item nav-user-status dropdown">
               <p class="mb-0">Last login was 23 hours ago.</p>
@@ -326,15 +328,19 @@
                     </tr>
                   </thead>
                   <tbody>
+
+                    {% for user in users %}
+
                     <tr>
                       <td class="py-1">
                         <img src="../../images/faces/face1.jpg" alt="image">
                       </td>
                       <td>
-                        Herman Beck
+                        {{ user.first_name }}
+                        {{ user.last_name }}
                       </td>
                       <td>
-                        $ 77.99
+                        {{ user.email }}
                       </td>
                       <th>
                         Specialties
@@ -368,29 +374,9 @@
                           
                       </td>
                     </tr>
-                    
-                    <tr>
-                      <td class="py-1">
-                        <img src="../../images/faces/face2.jpg" alt="image">
-                      </td>
-                      <td>
-                        Messsy Adam
-                      </td>
-                      <td>
-                        $245.30
-                      </td>
-                      <th>
-                        Specialties
-                      </th>
-                      <td>
-                        <button type="button" class="btn btn-info btn-rounded btn-fw">View Doctor</button>
-                        
-                        <a class="py-1" href="{% url 'scheduledsession' %}">
-                          <button type="button" class="btn btn-secondary btn-rounded btn-fw"href="{% url 'scheduledsession' %}">View Sessions</button>
-                        </a>
 
-                      </td>
-                    </tr>
+                    {% endfor %}
+
                   </tbody>
                 </table>
               </div>
