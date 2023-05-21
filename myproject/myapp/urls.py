@@ -14,7 +14,7 @@ urlpatterns = [
    path('scheduledsession.html', views.scheduledsession, name="scheduledsession"),
    path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
    path('dashboardForDoctor.html', views.dashboardForDoctor, name="dashboardForDoctor"),
-   path('allPatients.html', views.allPatients, name="allPatients"),
+   path('allPatients.html', views.your_view_function, name="allPatients"),
    
    #APPOINTMENT LIST
    path('appointmentspagedoctors.html', views.appointment_list, name="appointmentspagedoctors"),
