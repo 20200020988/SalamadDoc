@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
-
+from django import forms
 
 
 # Create your views here.
@@ -44,8 +44,6 @@ def dashboardForDoctor (request):
     return render(request, 'dashboardForDoctor.html', {})
 def allPatients (request):
     return render(request, 'allPatients.html', {})
-def appointmentspagedoctors (request):
-    return render(request, 'appointmentspagedoctors.html', {})
 
 
 
@@ -96,7 +94,7 @@ def dashboard(request):
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
     if request.method == 'POST':
-        patient_name = request.POST.get('patient_name')
+        patient_name = f"{forms.cleaned_data['first_name']} {forms.cleaned_data['last_name']}"
         doctor_name = request.POST.get('doctor_name')
         appointment_date = request.POST.get('appointment_date')
         appointment_description = request.POST.get('appointment_description')
@@ -110,29 +108,19 @@ def appointment_bookingDetails(request):
             
             # Assign values to other fields as needed
         )
-        
-        appointment.save(request=request)  # Pass the request object to the save() method
+        appointment.save()  # Save the appointment to the database
 
         return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
-    appointments = Appointment.objects.filter(account=request.user)
+    appointments = Appointment.objects.filter(patient_name=request.user.first_name + ' ' + request.user.last_name)
 
     context = {'appointments': appointments}
 
     return render(request, 'mybooking.html', context)
 
+
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
-    appointment.delete()    
+    appointment.delete()
     return redirect('appointment_bookingDetails')  # Redirect to the page displaying the table
-
-def delete_appointmentDoctors(request, appointment_id):
-    appointment = Appointment.objects.get(id=appointment_id)
-    appointment.delete()    
-    return redirect('appointmentspagedoctors')  # Redirect to the page displaying the table
-
-def appointment_list(request):
-    appointments = Appointment.objects.all()  # Retrieve all appointments from the database
-    context = {'appointments': appointments}  # Create a context dictionary with the appointments data
-    return render(request, 'appointmentspagedoctors.html', context)
 

@@ -6,14 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 
 
-
 # Create your views here.
 from .forms import CreateUserForm
 from .decorators import unauthenticated_user, allowed_users
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Appointment
-from .forms import CreateUserForm
 
 
 
@@ -44,8 +42,6 @@ def dashboardForDoctor (request):
     return render(request, 'dashboardForDoctor.html', {})
 def allPatients (request):
     return render(request, 'allPatients.html', {})
-def appointmentspagedoctors (request):
-    return render(request, 'appointmentspagedoctors.html', {})
 
 
 
@@ -110,29 +106,19 @@ def appointment_bookingDetails(request):
             
             # Assign values to other fields as needed
         )
-        
-        appointment.save(request=request)  # Pass the request object to the save() method
+        appointment.save()  # Save the appointment to the database
 
         return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
-    appointments = Appointment.objects.filter(account=request.user)
+    appointments = Appointment.objects.filter(patient_name=request.user.username)
 
     context = {'appointments': appointments}
 
     return render(request, 'mybooking.html', context)
 
+
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
-    appointment.delete()    
+    appointment.delete()
     return redirect('appointment_bookingDetails')  # Redirect to the page displaying the table
-
-def delete_appointmentDoctors(request, appointment_id):
-    appointment = Appointment.objects.get(id=appointment_id)
-    appointment.delete()    
-    return redirect('appointmentspagedoctors')  # Redirect to the page displaying the table
-
-def appointment_list(request):
-    appointments = Appointment.objects.all()  # Retrieve all appointments from the database
-    context = {'appointments': appointments}  # Create a context dictionary with the appointments data
-    return render(request, 'appointmentspagedoctors.html', context)
 

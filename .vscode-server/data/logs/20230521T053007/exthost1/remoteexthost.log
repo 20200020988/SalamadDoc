@@ -32,3 +32,13 @@
     at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
 2023-05-21 07:15:25.186 [error] Error: getaddrinfo EAI_AGAIN mobile.events.data.microsoft.com
     at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+2023-05-21 08:38:12.124 [error] [ms-python.python] provider FAILED
+2023-05-21 08:38:12.125 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-21 08:52:01.694 [error] [ms-python.python] provider FAILED
+2023-05-21 08:52:01.694 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:55034
+    at _0x54e010 (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30/dist/extension.bundle.js:1:64358)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)

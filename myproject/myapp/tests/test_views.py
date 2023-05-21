@@ -40,6 +40,10 @@ class HomeViewTest(unittest.TestCase):
     def test_alldoctors_view(self):
         response = self.client.get(reverse('alldoctors'))
         self.assertEqual(response.status_code, 200)
+    
+    def test_allPatients_view(self):
+        response = self.client.get(reverse('allPatients'))
+        self.assertEqual(response.status_code, 200)
 
     def test_mybooking_view(self):
         response = self.client.get(reverse('mybooking'))
@@ -52,10 +56,16 @@ class HomeViewTest(unittest.TestCase):
     def test_appointment_bookingDetails_view(self):
         response = self.client.get(reverse('appointmentbook'))
         self.assertEqual(response.status_code, 200)
+        
+    def test_dashboardForDoctor_view(self):
+        response = self.client.get(reverse('dashboardForDoctor'))
+        self.assertEqual(response.status_code, 200)
 
     def test_register_view(self):
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
 
-    
+    def test_loginpage_view(self):
+        response = self.client.get(reverse('login'))
+        self.assertEqual(response.status_code, 200)
 
