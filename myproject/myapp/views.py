@@ -108,11 +108,8 @@ def loginPage (request):
                 return redirect('dashboard')
             if user.groups.filter(name='doctor').exists():
                 return redirect('dashboardForDoctor')
-<<<<<<< HEAD
-=======
             if user.groups.filter(name='secretary').exists():
                 return redirect('dashboardsecretary')
->>>>>>> 17bd66f52d274e74ffc0a3e98c8354b62fda8145
         else:
             messages.info(request, 'Username or Password is incorrect')
         
