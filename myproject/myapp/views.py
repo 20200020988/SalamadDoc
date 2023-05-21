@@ -172,11 +172,17 @@ def dashboard(request):
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
     user_count = group.user_set.count()
+    
+    appointments = Appointment.objects.all()  # Retrieve all appointments from the database
+    booking_count = group.user_set.count()
+
 
     # Prepare the context data for the template
     context = {
         'user_count': user_count,
         # Other context variables
+        'booking_count': booking_count,
+
     }
 
     # Render the template
