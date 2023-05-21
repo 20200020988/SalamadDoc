@@ -15,13 +15,19 @@ urlpatterns = [
    path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
    path('dashboardForDoctor.html', views.dashboardForDoctor, name="dashboardForDoctor"),
    path('allPatients.html', views.allPatients, name="allPatients"),
-
+   
+   #APPOINTMENT LIST
+   path('appointmentspagedoctors.html', views.appointment_list, name="appointmentspagedoctors"),
 
    
    path('login.html', views.loginPage, name="login"),
    path('logout/', views.logoutUser, name="logout"),
    
    path('appointment_bookingDetails/', views.appointment_bookingDetails, name='appointment_bookingDetails'),
-   path('delete_appointment/<int:appointment_id>/', views.delete_appointment, name='delete_appointment'),
+   path('delete_appointment/<int:appointment_id>/', views.delete_appointment, name='delete_appointment',),
+   
+   path('delete_appointmentDoctors/<int:appointment_id>/', views.delete_appointmentDoctors, name='delete_appointmentDoctors',),
+
+   
    
 ]

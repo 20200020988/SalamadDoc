@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -10,6 +11,8 @@ class Appointment(models.Model):
     appointment_date=models.DateField(auto_now=True)
 
     appointment_description=models.TextField(max_length=500)
+    account = models.ForeignKey(User, on_delete=models.CASCADE)
+
     
 def __str__(self):
     return self.patient_name
