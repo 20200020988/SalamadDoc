@@ -344,11 +344,10 @@
                           <button type="button" class="btn btn-secondary btn-rounded btn-fw"href="{% url 'scheduledsession' %}">View Sessions</button>
                         </a>
 
-                        <a action="{% url 'delete_appointmentDoctors' appointment.id %}" method="post">
+                        <form action="{% url 'delete_appointmentDoctors' appointment.id %}" method="post"class="d-inline">
                           {% csrf_token %}
                           <button type="submit" class="btn btn-danger btn-rounded btn-fw">Delete</button>
-                        </a>
-                        
+                        </form>
 
                       </td>
                     </tr>

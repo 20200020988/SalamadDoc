@@ -192,11 +192,6 @@ def your_view_function(request):
     users = group.user_set.all()
     return render(request, 'allPatients.html', {'users': users})
 
-def your_view_function(request):
-    group_id = 2  # Replace with the desired group_id
-    group = Group.objects.get(id=group_id)
-    users = group.user_set.all()
-    return render(request, 'allPatients.html', {'users': users})
 
 def your_view_functionallDoctors(request):
     group_id = 3  # Replace with the desired group_id
@@ -237,5 +232,24 @@ def dashboard(request):
 
     # Render the template
     return render(request, 'dashboard.html', context)
+
+def dashboardForDoctor(request):
+    
+
+
+    # Call your_view_numberofdoctors function
+    appointments = Appointment.objects.filter(doctor_id=request.user.id)
+
+    
+
+    # Prepare the context data for the template
+    context = {
+        
+        'appointments': appointments,
+
+    }
+
+    # Render the template
+    return render(request, 'dashboardForDoctor.html', context)
 
 
