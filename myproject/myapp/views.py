@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 
 
 
@@ -143,5 +143,10 @@ def delete_appointmentDoctors(request, appointment_id):
 def appointment_list(request):
     appointments = Appointment.objects.all()  # Retrieve all appointments from the database
     context = {'appointments': appointments}  # Create a context dictionary with the appointments data
-    return render(request, 'appointmentspagedoctors.html', context)
+    return render(request, 'appointmentspagedoctors.html', context) 
 
+def your_view_function(request):
+    group_id = 2  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    users = group.user_set.all()
+    return render(request, 'allPatients.html', {'users': users})

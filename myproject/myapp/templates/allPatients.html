@@ -320,12 +320,14 @@
                   </thead>
                   <tbody>
                   
+                    {% for user in users %}
+
                     <tr>
                       <td class="py-1">
                         <img src="../../images/faces/face2.jpg" alt="image">
                       </td>
                       <td>
-                        Messsy Adam
+                        {{ user.username }}
                       </td>
                       <td>
                         $245.30
@@ -342,6 +344,9 @@
 
                       </td>
                     </tr>
+
+                    {% endfor %}
+
                     
                   </tbody>
                 </table>

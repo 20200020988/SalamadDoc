@@ -14,8 +14,12 @@ urlpatterns = [
    path('scheduledsession.html', views.scheduledsession, name="scheduledsession"),
    path('appointmentbook.html', views.appointmentbook, name="appointmentbook"),
    path('dashboardForDoctor.html', views.dashboardForDoctor, name="dashboardForDoctor"),
+<<<<<<< HEAD
    path('allPatients.html', views.allPatients, name="allPatients"),
    path('dashboardsecretary.html', views.dashboardsecretary, name="dashboardsecretary"),
+=======
+   path('allPatients.html', views.your_view_function, name="allPatients"),
+>>>>>>> f5b021d11f04295c3380e078ba34b4570a9f13e6
    
    #APPOINTMENT LIST
    path('appointmentspagedoctors.html', views.appointment_list, name="appointmentspagedoctors"),
