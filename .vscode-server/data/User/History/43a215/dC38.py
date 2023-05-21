@@ -93,7 +93,7 @@ def dashboard(request):
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
     if request.method == 'POST':
-        patient_name = request.POST.get('patient_name')
+        patient_name = request.POST.get('first_name' + 'last_name')
         doctor_name = request.POST.get('doctor_name')
         appointment_date = request.POST.get('appointment_date')
         appointment_description = request.POST.get('appointment_description')
@@ -111,11 +111,12 @@ def appointment_bookingDetails(request):
 
         return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
-    appointments = Appointment.objects.filter(patient_name=request.user.first_name + ' ' + request.user.last_name)
+    appointments = Appointment.objects.filter(patient_name=request.user.first_name + request.user.last_name)
 
     context = {'appointments': appointments}
 
     return render(request, 'mybooking.html', context)
+
 
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)

@@ -117,6 +117,7 @@ def appointment_bookingDetails(request):
 
     return render(request, 'mybooking.html', context)
 
+
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
     appointment.delete()

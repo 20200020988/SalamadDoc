@@ -12,7 +12,6 @@ from .decorators import unauthenticated_user, allowed_users
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Appointment
-from .forms import CreateUserForm
 
 
 
@@ -111,11 +110,12 @@ def appointment_bookingDetails(request):
 
         return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
-    appointments = Appointment.objects.filter(patient_name=request.user.first_name + ' ' + request.user.last_name)
+    appointments = Appointment.objects.filter(patient_name=request.user.patient_name)
 
     context = {'appointments': appointments}
 
     return render(request, 'mybooking.html', context)
+
 
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)

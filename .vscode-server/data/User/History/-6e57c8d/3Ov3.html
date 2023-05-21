@@ -47,6 +47,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
+                <i class="typcn typcn-cog-outline text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
                 <i class="typcn typcn-eject text-primary"></i>
                 Logout
               </a>
@@ -185,13 +189,14 @@
           </li>
           <li class="nav-item">
             <div class="d-flex align-items-baseline">
-              <p class="mb-0">Home</p>
               <i class="typcn typcn-chevron-right"></i>
-              <p class="mb-0">Main Dahboard</p>
+              <p class="mb-0">appointments</p>
             </div>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-search d-none d-md-block mr-0">
+          </li>
         </ul>
       </div>
     </nav>
@@ -391,7 +396,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'appointment_bookingDetails' %}">
+            <a class="nav-link" href="{% url 'mybooking' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
               <span class="menu-title">My Bookings</span>
             </a>
@@ -410,8 +415,8 @@
               <div style="padding: 10px;"></div>
               <h1 class="h4">Welcome!</h1>
               <div style="padding: 5px;"></div>
-              <h1 class="h1">Test Patient</h1>
-
+              <h1 class="h1">Scheduled Session | Calendar View</h1>
+              
               <div style="padding: 10px;"></div>
 
 
@@ -422,176 +427,65 @@
         <div style="padding: 20px;"></div>
 
           <div class="row">
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-                <h5 class="mb-2 text-titlecase mb-4">Status</h5>
-              <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Doctor</p>
-                      </div>
-                      <h2>3</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Patient</p>
-                      </div>
-                      <h2>2</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="row h-100">
-
-                <div class="col-md-6 stretch-card grid-margin grid-margin-md-0">
-
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Booking</p>
-                      </div>
-                      <h2>5</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-md-6 stretch-card">
-
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">New Booking</p>
-                      </div>
-                      <h2>1</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-              <h5 class="mb-2 text-titlecase mb-4">Your Upcoming Booking</h5>
-
-              <div class="row h-100">
-
-                <div class="col-md-12 stretch-card">
-                  <div class="card">
-
-                    <div class="card-body">
-                      <p class="card-description">
-                        Here is your upcoming appointments <code></code>
-                      </p>
-                      <div class="table-responsive">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Appointment Number</th>
-                              <th>Session Title</th>
-                              <th>Doctor</th>
-                              <th>Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>Photoshop</td>
-                              <td>Dr. Jacob</td>
-                              <td><label class="badge badge-danger">Pending</label></td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>Flash</td>
-                              <td>Dr. Nabo</td>
-                              <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                            <tr>
-                              <td>5</td>
-                              <td>Premier</td>
-                              <td>Dr. Paredes</td>
-                              <td><label class="badge badge-info">Fixed</label></td>
-                            </tr>
-                            <tr>
-                              <td>6</td>
-                              <td>After effects</td>
-                              <td>Dr. Meneses</td>
-                              <td><label class="badge badge-success">Completed</label></td>
-                            </tr>
-                            <tr>
-                              <td>10</td>
-                              <td>53275535</td>
-                              <td>Dr. Peralta</td>
-                              <td><label class="badge badge-warning">In progress</label></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 grid-margin stretch-card">
+            <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
+
                 <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Expenses</p>
-                      <h1 class="mb-0">8742</h1>
+                  <h4 class="card-title">Booking Appointments Details</h4>
+                  <p class="card-description">
+                    Enter here the details for appointment
+                  </p>
+
+                  <form class="forms-sample" method="post" action="{% url 'appointment_bookingDetails' %}" method="post">
+
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                      <label for="patient_name">Name</label>
+                      <input type="text" name="patient_name" class="form-control" id="patient_name" placeholder="Name">
                     </div>
-                    <i class="typcn typcn-briefcase icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="expense-chart" height="80"></canvas>
+
+                    <div class="form-group">
+                      <label for="appointment_description">Details</label>
+                      <textarea class="form-control" name="appointment_description" id="appointment_description" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select Doctor and Department</label>
+                      <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                        <option>Select</option>
+                        <option>Dr. Paredes</option>
+                        <option>Dr. Johnny</option>
+                        <option>Dr. Sins</option>
+                      </select>
+                    </div>
+
+                    <div class="col-lg-3 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Appointment Date</h4>
+                            <div style="text-align: left; vertical-align: top; margin-top: 100px">
+                            <input type="date">
+                            {{example_form.my_date_field}}
+                              
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                    <div style="padding: 10px;"></div>
+
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+
+                    <button class="btn btn-light" >Cancel</button>
+
+                  </form>
                 </div>
+
               </div>
             </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Budget</p>
-                      <h1 class="mb-0">47,840</h1>
-                    </div>
-                    <i class="typcn typcn-chart-pie icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="budget-chart" height="80"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
-                    <div>
-                      <p class="mb-2 text-md-center text-lg-left">Total Balance</p>
-                      <h1 class="mb-0">$7,243</h1>
-                    </div>
-                    <i class="typcn typcn-clipboard icon-xl text-secondary"></i>
-                  </div>
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class="row">
 
@@ -601,7 +495,7 @@
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-            <div class="card">
+            <div class="">
                 <div class="card-body">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>

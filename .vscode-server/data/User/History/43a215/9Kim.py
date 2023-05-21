@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
+from django import forms
 
 
 # Create your views here.
@@ -93,7 +94,7 @@ def dashboard(request):
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
     if request.method == 'POST':
-        patient_name = request.POST.get('patient_name')
+        patient_name = f"{forms.cleaned_data['first_name']} {forms.cleaned_data['last_name']}"
         doctor_name = request.POST.get('doctor_name')
         appointment_date = request.POST.get('appointment_date')
         appointment_description = request.POST.get('appointment_description')
@@ -116,6 +117,7 @@ def appointment_bookingDetails(request):
     context = {'appointments': appointments}
 
     return render(request, 'mybooking.html', context)
+
 
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)

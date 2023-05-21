@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
-
+from django import forms
 
 # Create your views here.
 from .forms import CreateUserForm
@@ -93,29 +93,33 @@ def dashboard(request):
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
     if request.method == 'POST':
-        patient_name = request.POST.get('patient_name')
-        doctor_name = request.POST.get('doctor_name')
-        appointment_date = request.POST.get('appointment_date')
-        appointment_description = request.POST.get('appointment_description')
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            patient_name = f"{form.cleaned_data['first_name']} {form.cleaned_data['last_name']}"
+            patient_name = request.POST.get('patient_name') 
+            doctor_name = request.POST.get('doctor_name')
+            appointment_date = request.POST.get('appointment_date')
+            appointment_description = request.POST.get('appointment_description')
         # Get other form fields as needed
         
-        appointment = Appointment(
-            patient_name=patient_name,
-            doctor_name=doctor_name,
-            appointment_date=appointment_date,
-            appointment_description = appointment_description,
+            appointment = Appointment(
+                patient_name=patient_name,
+                doctor_name=doctor_name,
+                appointment_date=appointment_date,
+                appointment_description = appointment_description,
             
             # Assign values to other fields as needed
-        )
-        appointment.save()  # Save the appointment to the database
+            )
+            appointment.save()  # Save the appointment to the database
 
-        return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
+            return redirect('appointment_bookingDetails')  # Redirect to the same page after saving
    
-    appointments = Appointment.objects.filter(patient_name=request.user.first_name + ' ' + request.user.last_name)
+        appointments = Appointment.objects.filter(patient_name=request.user.first_name + ' ' + request.user.last_name)
 
-    context = {'appointments': appointments}
+        context = {'appointments': appointments}
 
-    return render(request, 'mybooking.html', context)
+        return render(request, 'mybooking.html', context)
+
 
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)

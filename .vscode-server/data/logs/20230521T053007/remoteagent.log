@@ -20,3 +20,5 @@
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
 2023-05-21 08:05:47.760 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
     at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
+2023-05-21 08:41:21.135 [error] Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16)
