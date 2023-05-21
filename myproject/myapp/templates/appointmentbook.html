@@ -452,11 +452,11 @@
 
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Select Doctor and Department</label>
-                      <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                      <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="doctor_name">
                         <option>Select</option>
-                        <option>Dr. Paredes</option>
-                        <option>Dr. Johnny</option>
-                        <option>Dr. Sins</option>
+                        {% for user in users %}
+                        <option>{{ user.first_name }} {{ user.last_name }}</option>
+                        {% endfor %}
                       </select>
                     </div>
 

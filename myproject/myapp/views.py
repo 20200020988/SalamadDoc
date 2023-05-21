@@ -141,3 +141,22 @@ def your_view_function(request):
     group = Group.objects.get(id=group_id)
     users = group.user_set.all()
     return render(request, 'allPatients.html', {'users': users})
+
+def your_view_function(request):
+    group_id = 2  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    users = group.user_set.all()
+    return render(request, 'allPatients.html', {'users': users})
+
+def your_view_functionallDoctors(request):
+    group_id = 3  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    users = group.user_set.all()
+    return render(request, 'alldoctors.html', {'users': users})
+
+def your_view_functionallDoctorsDragDown(request):
+    group_id = 3  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    users = group.user_set.all()
+    return render(request, 'appointmentbook.html', {'users': users})
+
