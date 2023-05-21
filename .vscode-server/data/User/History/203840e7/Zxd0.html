@@ -46,15 +46,17 @@
               <span class="nav-profile-name">Eugenia Mullins</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="typcn typcn-cog-outline text-primary"></i>
-                Settings
+              <a class="dropdown-item" href="#" id="logoutBtn">
+                  <i class="typcn typcn-eject text-primary"></i>
+                  Logout
               </a>
-              <a class="dropdown-item">
-                <i class="typcn typcn-eject text-primary"></i>
-                Logout
-              </a>
-            </div>
+          </div>
+          
+          <script>
+              document.getElementById("logoutBtn").addEventListener("click", function() {
+                  window.location.href = "{% url 'logout' %}";
+              });
+          </script>
           </li>
           <li class="nav-item nav-user-status dropdown">
               <p class="mb-0">Last login was 23 hours ago.</p>
@@ -168,37 +170,6 @@
     </nav>
     <!-- partial -->
     <nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
-      <div class="navbar-links-wrapper d-flex align-items-stretch">
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-calendar-outline"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-mail"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-folder"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-document-text"></i></a>
-        </div>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item ml-0">
-            <h4 class="mb-0">Dashboard</h4>
-          </li>
-          <li class="nav-item">
-            <div class="d-flex align-items-baseline">
-              <i class="typcn typcn-chevron-right"></i>
-              <p class="mb-0">appointments</p>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-search d-none d-md-block mr-0">
-          </li>
-        </ul>
-      </div>
     </nav>
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
@@ -396,7 +367,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'mybooking' %}">
+            <a class="nav-link" href="{% url 'appointment_bookingDetails' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
               <span class="menu-title">My Bookings</span>
             </a>
@@ -415,8 +386,8 @@
               <div style="padding: 10px;"></div>
               <h1 class="h4">Welcome!</h1>
               <div style="padding: 5px;"></div>
-              <h1 class="h1">Scheduled Session | Calendar View</h1>
-              
+              <h1 class="h1">Test Patient</h1>
+
               <div style="padding: 10px;"></div>
 
 
@@ -427,75 +398,125 @@
         <div style="padding: 20px;"></div>
 
           <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-
-                <div class="card-body">
-                  <h4 class="card-title">Booking Appointments Details</h4>
-                  <p class="card-description">
-                    Enter here the details for appointment
-                  </p>
-
-                  <form class="forms-sample" method="post" action="{% url 'appointment_bookingDetails' %}" method="post">
-
-                    {% csrf_token %}
-                    
-                    <div class="form-group">
-                      <input type="hidden" name="patient_id" value="{{ request.user.id }}">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="appointment_description">Details</label>
-                      <textarea class="form-control" name="appointment_description" id="appointment_description" rows="4"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect1">Select Doctor and Department</label>
-                      <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="doctor_id">
-                        <option>Select</option>
-                        {% for user in users %}
-                        <option value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</option>
-                        {% endfor %}
-                      </select>
-                    </div>
-<<<<<<< HEAD
-                    
-=======
->>>>>>> 17bd66f52d274e74ffc0a3e98c8354b62fda8145
-                    <div class="col-lg-3 grid-margin stretch-card">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title">Appointment Date</h4>
-                            <div style="text-align: left; vertical-align: top; margin-top: 100px">
-                          
-                             <input type="date" name="appointment_date" id="id_appointment_date">
-                            {{example_form.appointment_date}}                             
-                        </div>
+            <div class="col-xl-6 grid-margin stretch-card flex-column">
+                <h5 class="mb-2 text-titlecase mb-4">Status</h5>
+              <div class="row">
+                <div class="col-md-6 grid-margin stretch-card">
+                  
+                  <div class="card">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 text-muted">Total Doctor</p>
                       </div>
+                      <h2>{{ user_count }}</h2>
+                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
                     </div>
                   </div>
 
-                    <div style="padding: 10px;"></div>
-
-                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
-
-                  <button class="btn btn-light" >Cancel</button>
-
-                  </form>
                 </div>
 
+                <div class="col-md-6 grid-margin stretch-card">
+                  
+                  <div class="card">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 text-muted">Total Booking</p>
+                      </div>
+                      <h2>2</h2>
+                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="row h-100">
+
+                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
+
+                  <div class="card">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <p class="mb-0 text-muted">Upcoming Booking Schedule</p>
+                      </div>
+                      <h1>5</h1>
+                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-6 stretch-card">
+                </div>
               </div>
             </div>
+            
+            <div class="col-xl-6 grid-margin stretch-card flex-column">
+              <h5 class="mb-2 text-titlecase mb-4">Your Upcoming Booking</h5>
 
-          <div class="row">
+              <div class="row h-100">
 
+                <div class="col-md-12 stretch-card">
+                  <div class="card">
+
+                    <div class="card-body">
+                      <p class="card-description">
+                        Here is your upcoming appointments <code></code>
+                      </p>
+                      <div class="table-responsive">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Appointment Number</th>
+                              <th>Session Title</th>
+                              <th>Doctor</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Photoshop</td>
+                              <td>Dr. Jacob</td>
+                              <td><label class="badge badge-danger">Pending</label></td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Flash</td>
+                              <td>Dr. Nabo</td>
+                              <td><label class="badge badge-warning">In progress</label></td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Premier</td>
+                              <td>Dr. Paredes</td>
+                              <td><label class="badge badge-info">Fixed</label></td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>After effects</td>
+                              <td>Dr. Meneses</td>
+                              <td><label class="badge badge-success">Completed</label></td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>53275535</td>
+                              <td>Dr. Peralta</td>
+                              <td><label class="badge badge-warning">In progress</label></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-            <div class="">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
