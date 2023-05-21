@@ -6,7 +6,10 @@ from django.contrib.auth.models import User
 
 class Appointment(models.Model):
     patient_name=models.CharField(max_length=40,null=True)
+    patient_id=models.CharField(max_length=40,null=True)
     doctor_name=models.CharField(max_length=40,null=True)
+    doctor_id=models.CharField(max_length=40,null=True)
+
     
     # should be appointment_date=models.DateField()
     appointment_date=models.DateField(auto_now=True)
@@ -22,3 +25,4 @@ class Appointment(models.Model):
         
 def __str__(self):
     return self.patient_name
+

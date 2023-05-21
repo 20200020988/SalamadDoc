@@ -19,7 +19,7 @@ urlpatterns = [
    path('patientsecretary.html', views.patientsecretary, name="patientsecretary"),
    path('appointmentspagesecretary.html', views.appointmentspagesecretary, name="appointmentspagesecretary"),
    #APPOINTMENT LIST
-   path('appointmentspagedoctors.html', views.appointment_list, name="appointmentspagedoctors"),
+   path('appointmentspagedoctors.html', views.appointment_listIfYouAreADoctor, name="appointmentspagedoctors"),
 
    
    path('login.html', views.loginPage, name="login"),
