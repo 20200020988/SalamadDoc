@@ -1,0 +1,11 @@
+2023-05-25 03:19:44.686 [info] 
+
+
+
+
+2023-05-25 03:19:44.782 [info] Extension host agent started.
+2023-05-25 03:19:45.045 [info] Deleted from disk ms-python.vscode-pylance /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.30
+2023-05-25 03:19:47.191 [info] [127.0.0.1][a4a1fd9d][ManagementConnection] New connection established.
+2023-05-25 03:19:47.194 [info] [127.0.0.1][d682cbad][ExtensionHostConnection] New connection established.
+2023-05-25 03:19:47.204 [info] [127.0.0.1][d682cbad][ExtensionHostConnection] <399029> Launched Extension Host Process.
+2023-05-25 03:24:44.789 [info] New EH opened, aborting shutdown

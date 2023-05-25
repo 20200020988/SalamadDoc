@@ -1,0 +1,14 @@
+2023-05-25 03:35:24.132 [info] [Info  - 3:35:24 AM] (400864) Pylance language server 2023.5.40 (pyright e6d7b84c) starting
+2023-05-25 03:35:24.133 [info] [Info  - 3:35:24 AM] (400864) Server root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist
+2023-05-25 03:35:24.137 [info] [Info  - 3:35:24 AM] (400864) Starting service instance "vagrant"
+2023-05-25 03:35:24.352 [info] [Info  - 3:35:24 AM] (400864) Setting pythonPath for service "vagrant": "/bin/python3"
+2023-05-25 03:35:24.353 [info] [Warn  - 3:35:24 AM] (400864) stubPath /home/vagrant/typings is not a valid directory.
+2023-05-25 03:35:24.401 [info] [Info  - 3:35:24 AM] (400864) Assuming Python version 3.8
+2023-05-25 03:35:24.657 [info] [Info  - 3:35:24 AM] (400864) Found 25 source files
+2023-05-25 03:35:25.812 [info] [Info  - 3:35:25 AM] (400864) Background analysis(1) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist
+2023-05-25 03:35:25.839 [info] [Info  - 3:35:25 AM] (400864) Background analysis(1) started
+2023-05-25 03:35:26.491 [info] [Info  - 3:35:26 AM] (400864) Indexer background runner(2) root directory: /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist (index)
+2023-05-25 03:35:26.494 [info] [Info  - 3:35:26 AM] (400864) Indexing(2) started
+2023-05-25 03:35:28.086 [info] [Info  - 3:35:28 AM] (400864) scanned(2) 90 files over 1 exec env
+2023-05-25 03:35:30.105 [info] [Info  - 3:35:30 AM] (400864) indexed(2) 48 files over 1 exec env
+2023-05-25 03:35:30.112 [info] [Info  - 3:35:30 AM] (400864) Indexing finished(2).
