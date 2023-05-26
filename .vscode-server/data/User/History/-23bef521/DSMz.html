@@ -30,8 +30,7 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="dashboard.html"><img src="{% static 'myapp/images/logo.svg' %}" alt="logo"/></a>
-          <a class="navbar-brand brand-logo-mini" href="dashboard.html"><img src="{% static 'images/logo-mini.svg' %}" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="dashboardForDoctor.html" style="color: white; font-weight: bold;">Salamadok</a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="typcn typcn-th-menu"></span>
           </button>
@@ -42,33 +41,20 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="{% static 'myapp/images/faces/face5.jpg' %}" alt="profile"/>
               <span class="nav-profile-name">{{ request.user.first_name }} {{ request.user.last_name }}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#" id="logoutBtn">
-                  <i class="typcn typcn-eject text-primary"></i>
-                  Logout
+              <a class="dropdown-item">
+                <i class="typcn typcn-cog-outline text-primary"></i>
+                Settings
               </a>
-          </div>
-          
-          <script>
-              document.getElementById("logoutBtn").addEventListener("click", function() {
-                  window.location.href = "{% url 'logout' %}";
-              });
-          </script>
-          </li>
-          <li class="nav-item nav-user-status dropdown">
-              <p class="mb-0">Last login was 23 hours ago.</p>
-          </li>
+              <a class="dropdown-item">
+                <i class="typcn typcn-eject text-primary"></i>
+                Logout
+              </a>
+            </div>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-date dropdown">
-            <a class="nav-link d-flex justify-content-center align-items-center" href="javascript:;">
-              <h6 class="date mb-0">Today : Mar 23</h6>
-              <i class="typcn typcn-calendar"></i>
-            </a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
               <i class="typcn typcn-cog-outline mx-0"></i>
@@ -115,17 +101,7 @@
             </div>
           </li>
           <li class="nav-item dropdown mr-0">
-            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
-              <i class="typcn typcn-bell mx-0"></i>
-              <span class="count"></span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-              <a class="dropdown-item preview-item">
-                <div class="preview-thumbnail">
-                  <div class="preview-icon bg-success">
-                    <i class="typcn typcn-info mx-0"></i>
-                  </div>
                 </div>
                 <div class="preview-item-content">
                   <h6 class="preview-subject font-weight-normal">Application Error</h6>
@@ -169,8 +145,7 @@
       </div>
     </nav>
     <!-- partial -->
-    <nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
-    </nav>
+    
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
@@ -345,34 +320,32 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="dashboard.html">
+            <a class="nav-link" href="{% url 'dashboardForDoctor' %}">
               <i class="typcn typcn-device-desktop menu-icon"></i>
               <span class="menu-title">Home</span>
                <!-- <div class="badge badge-danger">new</div> -->
             </a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'alldoctors' %}">
+            <a class="nav-link" href="{% url 'allPatients' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
-              <span class="menu-title">All Doctors</span>
+              <span class="menu-title">Patients</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'scheduledsession' %}">
+            <a class="nav-link" href="{% url 'appointmentspagedoctors' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
               <span class="menu-title">Appointments</span>
             </a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'appointment_bookingDetails' %}">
-              <i class="typcn typcn-mortar-board menu-icon"></i>
-              <span class="menu-title">My Bookings</span>
+            <a class="nav-link" href="{% url 'selectSecretary' %}">
+              <i class="typcn typcn-device-desktop menu-icon"></i>
+              <span class="menu-title">Add Secretary</span>
+               <!-- <div class="badge badge-danger">new</div> -->
             </a>
           </li>
-
         </ul>
       </nav>
       <!-- partial -->
@@ -384,10 +357,10 @@
             <div class="card-body">
 
               <div style="padding: 10px;"></div>
-              <h1 class="h4">Welcome,</h1>
+              <h1 class="h4">Welcome!</h1>
               <div style="padding: 5px;"></div>
-              <h1 class="h1">{{ request.user.first_name }}!</h1>
-
+              <h1 class="h1">Scheduled Session | Calendar View</h1>
+              
               <div style="padding: 10px;"></div>
 
 
@@ -398,104 +371,56 @@
         <div style="padding: 20px;"></div>
 
           <div class="row">
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-                <h5 class="mb-2 text-titlecase mb-4">Status</h5>
-              <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Doctor</p>
-                      </div>
-                      <h2>{{ user_count }}</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+
+                <div class="card-body">
+                  <h4 class="card-title">Secretary Details</h4>
+                  <p class="card-description">
+                    Enter here to select secretary
+                  </p>
+
+                  <form class="forms-sample" method="post" action="{% url 'selectSecretary' %}" method="post">
+
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                      <input type="hidden" name="doctor_id" value="{{ request.user.id }}">
                     </div>
+
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select Secretary</label>
+                      <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="secretary_id">
+                        <option>Select</option>
+                        {% for user in users %}
+                        <option value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</option>
+                        {% endfor %}
+                      </select>
+
+                    </div>  
                   </div>
 
+                    <div style="padding: 10px;"></div>
+
+                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+                  <button class="btn btn-light" >Cancel</button>
+
+                  </form>
                 </div>
 
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Booking</p>
-                      </div>
-                      <h2>{{ appointments_count }}</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="row h-100">
-
-                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Latest Booking</p>
-                      </div>
-                      <h1> insert recent date here </h1>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-md-6 stretch-card">
-                </div>
               </div>
             </div>
-            
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-              <h5 class="mb-2 text-titlecase mb-4">Your Upcoming Booking</h5>
 
-              <div class="row h-100">
+          <div class="row">
 
-                <div class="col-md-12 stretch-card">
-                  <div class="card">
-
-                    <div class="card-body">
-                      <p class="card-description">
-                        Here is your upcoming appointments <code></code>
-                      </p>
-                      <div class="table-responsive">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Patient Name</th>
-                              <th>Doctor</th>
-                              <th>Description</th>
-                              <th>Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-
-                            {% for data in appointments %}  
-
-                            <tr>
-                              <td>{{data.patient_name}}</td>
-                              <td>{{data.doctor_name}}</td>
-                              <td>{{data.appointment_description}}</td>
-                            </tr>
-                            {% endfor %}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-            <div class="card">
+            <div class="">
                 <div class="card-body">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
