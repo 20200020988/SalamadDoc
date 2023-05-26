@@ -9,6 +9,9 @@ class Appointment(models.Model):
     patient_id=models.CharField(max_length=40,null=True)
     doctor_name=models.CharField(max_length=40,null=True)
     doctor_id=models.CharField(max_length=40,null=True)
+    patient_email=models.CharField(max_length=40,null=True)
+    secretary_id = models.CharField(max_length=40, null=True)  # Add the secretary_id field
+    secretary_name=models.CharField(max_length=40,null=True)
 
     
     # should be appointment_date=models.DateField()
@@ -26,3 +29,19 @@ class Appointment(models.Model):
 def __str__(self):
     return self.patient_name
 
+class DoctorLinksSecretary(models.Model):
+    secretary_id=models.CharField(max_length=40,null=True)
+    secretary_name=models.CharField(max_length=40,null=True)
+    doctor_name=models.CharField(max_length=40,null=True)
+    doctor_id=models.CharField(max_length=40,null=True)
+
+    account = models.ForeignKey(User, on_delete=models.CASCADE, default=None, editable=False, null=True)
+
+    def save(self, *args, **kwargs):
+        request = kwargs.pop('request', None)  # Get the request object from kwargs
+        if request:
+            self.account = request.user
+        super().save(*args, **kwargs)
+        
+def __str__(self):
+    return self.patient_name

@@ -167,39 +167,7 @@
       </div>
     </nav>
     <!-- partial -->
-    <nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
-      <div class="navbar-links-wrapper d-flex align-items-stretch">
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-calendar-outline"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-mail"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-folder"></i></a>
-        </div>
-        <div class="nav-link">
-          <a href="javascript:;"><i class="typcn typcn-document-text"></i></a>
-        </div>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item ml-0">
-            <h4 class="mb-0">Dashboard</h4>
-          </li>
-          <li class="nav-item">
-            <div class="d-flex align-items-baseline">
-              <i class="typcn typcn-chevron-right"></i>
-              <p class="mb-0">appointments</p>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item nav-search d-none d-md-block mr-0">
-          </li>
-        </ul>
-      </div>
-    </nav>
+    
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
@@ -440,8 +408,9 @@
 
                     {% csrf_token %}
                     
-                    <div class="form-group">
+                    <div class="form-group"> 
                       <input type="hidden" name="patient_id" value="{{ request.user.id }}">
+                      <input type="hidden" name="patient_email" value="{{ request.user.email }}">
                     </div>
 
                     <div class="form-group">
@@ -454,7 +423,7 @@
                       <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="doctor_id">
                         <option>Select</option>
                         {% for user in users %}
-                        <option value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</option>
+                        <option value="{{ user.id }}" data-secretary-id="{{ user.secretary_id }}">{{ user.first_name }} {{ user.last_name }}</option>
                         {% endfor %}
                       </select>
                     </div>

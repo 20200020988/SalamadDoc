@@ -263,6 +263,14 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'selectSecretary' %}">
+              <i class="typcn typcn-device-desktop menu-icon"></i>
+              <span class="menu-title">Add Secretary</span>
+               <!-- <div class="badge badge-danger">new</div> -->
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- partial -->
@@ -311,6 +319,7 @@
                   <tbody>
 
                     {% for appointment in appointments %}
+                    
                   
                       </td>
                       <td>

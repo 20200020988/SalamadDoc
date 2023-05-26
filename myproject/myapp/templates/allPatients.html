@@ -261,6 +261,14 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'selectSecretary' %}">
+              <i class="typcn typcn-device-desktop menu-icon"></i>
+              <span class="menu-title">Add Secretary</span>
+               <!-- <div class="badge badge-danger">new</div> -->
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- partial -->
@@ -302,7 +310,7 @@
                         Email
                       </th>
                       <th>
-                        Address
+                        Appointment Date
                       </th>
                     </tr>
                   </thead>
@@ -310,21 +318,21 @@
                   
                     {% for user in users %}
 
+
                     <tr>
                       </td>
                       <td>
-                        {{ user.first_name }}
-                        {{ user.last_name }}
+                        {{ user.patient_name }}
                       </td>
                       <td>
-                        {{ user.email }}
+                        {{ user.patient_email }}
                       </td>
                       <th>
-                        Specialties
+                        {{ user.appointment_date }}
                       </th>
                       <td>
-                        <a class="py-1" href="{% url 'scheduledsession' %}">
-                          <button type="button" class="btn btn-secondary btn-rounded btn-fw"href="{% url 'scheduledsession' %}">View Sessions</button>
+                        <a class="py-1" href="{% url 'appointmentspagedoctorsOptions' selected_account_id=user.account_id %}">
+                          <button type="button" class="btn btn-secondary btn-rounded btn-fw">View Option Sessions</button>
                         </a>
 
                       </td>
