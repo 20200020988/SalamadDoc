@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
 from datetime import datetime, timedelta
+from django.core.exceptions import ObjectDoesNotExist
+
+
 
 
 
@@ -218,8 +221,6 @@ def dashboard(request):
     appointments = Appointment.objects.filter(account=request.user)
     appointments_count = appointments.count()
 
-    latest_appointment = appointments.latest('appointment_date')
-    latest_appointment_date = latest_appointment.appointment_date
     
 
     # Prepare the context data for the template
@@ -230,7 +231,6 @@ def dashboard(request):
                 
         'appointments': appointments,
         
-        'latest_appointment_date': latest_appointment_date,
 
     }
 
