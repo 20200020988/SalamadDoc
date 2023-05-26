@@ -1,0 +1,70 @@
+2023-05-26 04:20:57.049 [info] Extension host with pid 426596 started
+2023-05-26 04:20:57.150 [info] Lock '/home/vagrant/.vscode-server/data/User/workspaceStorage/49c7eca104af6a0210621ab8aecf3fe2/vscode.lock': Lock acquired.
+2023-05-26 04:20:57.858 [info] ExtensionService#_doActivateExtension batisteo.vscode-django, startup: false, activationEvent: 'onLanguage:django-html'
+2023-05-26 04:20:57.864 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-05-26 04:20:58.793 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-05-26 04:20:58.795 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: true, activationEvent: '*'
+2023-05-26 04:20:58.795 [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion, startup: true, activationEvent: '*'
+2023-05-26 04:21:00.214 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-05-26 04:21:00.214 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-05-26 04:21:08.913 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-05-26 04:21:08.914 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-05-26 04:34:23.242 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python'
+2023-05-26 04:34:23.950 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2023-05-26 05:25:46.345 [error] [ms-python.python] provider FAILED
+2023-05-26 05:25:46.345 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist/extension.bundle.js:1:55238
+    at _0x510d3a (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist/extension.bundle.js:1:64663)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-26 05:33:07.779 [error] [ms-python.python] provider FAILED
+2023-05-26 05:33:07.789 [error] TypeError: Cannot read properties of undefined (reading 'data')
+    at /home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist/extension.bundle.js:1:55238
+    at _0x510d3a (/home/vagrant/.vscode-server/extensions/ms-python.vscode-pylance-2023.5.40/dist/extension.bundle.js:1:64663)
+    at oe.provideCompletionItems (/home/vagrant/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/out/vs/workbench/api/node/extensionHostProcess.js:101:52890)
+2023-05-26 06:42:49.474 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2023-05-26 06:55:40.485 [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+2023-05-26 06:55:53.663 [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+2023-05-26 06:55:58.845 [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+2023-05-26 06:56:04.074 [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+2023-05-26 06:56:09.232 [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+2023-05-26 06:56:15.396 [warning] [Decorations] CAPPING events from decorations provider vscode.git 254
+2023-05-26 06:56:20.576 [warning] [Decorations] CAPPING events from decorations provider vscode.git 254
+2023-05-26 06:56:25.812 [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+2023-05-26 06:56:31.205 [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+2023-05-26 06:56:36.402 [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+2023-05-26 06:56:41.605 [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+2023-05-26 06:56:49.925 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:56:55.135 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:57:00.298 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:57:05.468 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:57:10.629 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:57:15.770 [warning] [Decorations] CAPPING events from decorations provider vscode.git 258
+2023-05-26 06:57:20.935 [warning] [Decorations] CAPPING events from decorations provider vscode.git 259
+2023-05-26 06:57:26.151 [warning] [Decorations] CAPPING events from decorations provider vscode.git 259
+2023-05-26 06:57:31.300 [warning] [Decorations] CAPPING events from decorations provider vscode.git 259
+2023-05-26 06:57:36.476 [warning] [Decorations] CAPPING events from decorations provider vscode.git 259
+2023-05-26 06:57:41.650 [warning] [Decorations] CAPPING events from decorations provider vscode.git 259
+2023-05-26 06:57:47.738 [warning] [Decorations] CAPPING events from decorations provider vscode.git 260
+2023-05-26 06:57:57.241 [warning] [Decorations] CAPPING events from decorations provider vscode.git 261
+2023-05-26 06:58:02.436 [warning] [Decorations] CAPPING events from decorations provider vscode.git 261
+2023-05-26 06:58:07.640 [warning] [Decorations] CAPPING events from decorations provider vscode.git 261
+2023-05-26 06:58:12.856 [warning] [Decorations] CAPPING events from decorations provider vscode.git 262
+2023-05-26 06:58:18.053 [warning] [Decorations] CAPPING events from decorations provider vscode.git 262
+2023-05-26 06:58:23.896 [warning] [Decorations] CAPPING events from decorations provider vscode.git 262
+2023-05-26 06:58:29.050 [warning] [Decorations] CAPPING events from decorations provider vscode.git 262
+2023-05-26 06:58:34.261 [warning] [Decorations] CAPPING events from decorations provider vscode.git 262
+2023-05-26 06:58:39.456 [warning] [Decorations] CAPPING events from decorations provider vscode.git 263
+2023-05-26 06:58:44.605 [warning] [Decorations] CAPPING events from decorations provider vscode.git 263
+2023-05-26 06:58:49.762 [warning] [Decorations] CAPPING events from decorations provider vscode.git 263
+2023-05-26 06:58:59.267 [warning] [Decorations] CAPPING events from decorations provider vscode.git 264
+2023-05-26 06:59:04.881 [warning] [Decorations] CAPPING events from decorations provider vscode.git 264
+2023-05-26 06:59:10.003 [warning] [Decorations] CAPPING events from decorations provider vscode.git 264
+2023-05-26 06:59:15.132 [warning] [Decorations] CAPPING events from decorations provider vscode.git 265
+2023-05-26 06:59:20.301 [warning] [Decorations] CAPPING events from decorations provider vscode.git 265
+2023-05-26 06:59:26.252 [warning] [Decorations] CAPPING events from decorations provider vscode.git 265
+2023-05-26 06:59:31.444 [warning] [Decorations] CAPPING events from decorations provider vscode.git 265
+2023-05-26 06:59:46.119 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-05-26 06:59:53.476 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-05-26 06:59:58.671 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-05-26 07:00:03.847 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
+2023-05-26 07:00:09.109 [warning] [Decorations] CAPPING events from decorations provider vscode.git 266
