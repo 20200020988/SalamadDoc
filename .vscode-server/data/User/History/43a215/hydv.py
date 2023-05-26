@@ -16,8 +16,6 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Appointment
 from .forms import CreateUserForm
-from django.core.exceptions import ObjectDoesNotExist
-
 
 
 
@@ -208,32 +206,29 @@ def your_view_functionallDoctorsDragDown(request):
     return render(request, 'appointmentbook.html', {'users': users})
 
 def dashboard(request):
+    
     current_time = datetime.now()
 
+
+    # Call your_view_numberofdoctors function
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
     user_count = group.user_set.count()
-
+    
     appointments = Appointment.objects.filter(account=request.user)
     appointments_count = appointments.count()
 
-    latest_appointment_date = None
-    try:
-        latest_appointment = appointments.latest('appointment_date')
-        latest_appointment_date = latest_appointment.appointment_date
-    except ObjectDoesNotExist:
-        # Handle the case when no appointments exist
-        pass
 
     # Prepare the context data for the template
     context = {
         'user_count': user_count,
+        # Other context variables
         'appointments_count': appointments_count,
+                
         'appointments': appointments,
-        'latest_appointment_date': latest_appointment_date,
-    }
+        
 
-    return render(request, 'dashboard.html', context)
+    }
 
     # Render the template
     return render(request, 'dashboard.html', context)
