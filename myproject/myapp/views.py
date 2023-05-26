@@ -79,19 +79,29 @@ def dashboardsecretary (request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
 def patientsecretary (request):
+    
     secretary = request.user  # Get the currently logged-in secretary
 
     # Retrieve the DoctorLinksSecretary object for the secretary
     doctor_links_secretary = DoctorLinksSecretary.objects.filter(secretary_id=secretary.id).first()
     users = []
-    
+
     if doctor_links_secretary:
         doctor_id = doctor_links_secretary.doctor_id
-        # Retrieve the appointments linked to the doctor
-        users = Appointment.objects.filter(doctor_id=doctor_id)
+        # Retrieve all appointments linked to the doctor
+        appointments = Appointment.objects.filter(doctor_id=doctor_id)
         
-    context = {'users': users}
+        # Filter out duplicate patients
+        unique_patients = set()
+        for appointment in appointments:
+            unique_patients.add(appointment.patient_id)
+        
+        # Retrieve the latest appointment for each unique patient
+        for patient_id in unique_patients:
+            latest_appointment = Appointment.objects.filter(doctor_id=doctor_id, patient_id=patient_id).latest('id')
+            users.append(latest_appointment)
 
+    context = {'users': users}
     return render(request, 'patientsecretary.html', context)
 
 @login_required(login_url='login')
