@@ -1,3 +1,4 @@
+from django.http import HttpResponseBadRequest
 from django.shortcuts import render, redirect 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -6,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group, User
 from datetime import datetime, timedelta
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Max
+from myapp.models import DoctorLinksSecretary
 
 
 
@@ -18,9 +21,10 @@ from .decorators import unauthenticated_user, allowed_users
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Appointment
+from .models import DoctorLinksSecretary
 from .forms import CreateUserForm
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.views import View
 
 
 
@@ -75,12 +79,39 @@ def dashboardsecretary (request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
 def patientsecretary (request):
-    return render(request, 'patientsecretary.html', {})
+    secretary = request.user  # Get the currently logged-in secretary
+
+    # Retrieve the DoctorLinksSecretary object for the secretary
+    doctor_links_secretary = DoctorLinksSecretary.objects.filter(secretary_id=secretary.id).first()
+    users = []
+    
+    if doctor_links_secretary:
+        doctor_id = doctor_links_secretary.doctor_id
+        # Retrieve the appointments linked to the doctor
+        users = Appointment.objects.filter(doctor_id=doctor_id)
+        
+    context = {'users': users}
+
+    return render(request, 'patientsecretary.html', context)
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
 def appointmentspagesecretary (request):
-    return render(request, 'appointmentspagesecretary.html', {})
+    
+    secretary = request.user  # Get the currently logged-in secretary
+
+    # Retrieve the DoctorLinksSecretary object for the secretary
+    doctor_links_secretary = DoctorLinksSecretary.objects.filter(secretary_id=secretary.id).first()
+    appointments = []
+    
+    if doctor_links_secretary:
+        doctor_id = doctor_links_secretary.doctor_id
+        # Retrieve the appointments linked to the doctor
+        appointments = Appointment.objects.filter(doctor_id=doctor_id)
+        
+    context = {'appointments': appointments}
+
+    return render(request, 'appointmentspagesecretary.html', context)
 
 
 def register (request):
@@ -136,8 +167,10 @@ def appointment_bookingDetails(request):
         doctor_id = request.POST.get('doctor_id')
         appointment_date = request.POST.get('appointment_date')
         appointment_description = request.POST.get('appointment_description')
+        patient_email=request.POST.get('patient_email')
         # Get other form fields as needed
         
+
         doctor = User.objects.get(id=doctor_id)
         doctor_name = f"{doctor.first_name} {doctor.last_name}" if doctor else ""
         
@@ -145,13 +178,26 @@ def appointment_bookingDetails(request):
         patient_name = f"{patient.first_name} {patient.last_name}" if patient else ""
 
 
-        
+        # Get the DoctorLinksSecretary object for the selected doctor
+        doctor_links_secretary = DoctorLinksSecretary.objects.filter(doctor_id=doctor_id).first()
+        # Extract the secretary_id and secretary_name if available
+        if doctor_links_secretary:
+            secretary_id = doctor_links_secretary.secretary_id
+            secretary_name = doctor_links_secretary.secretary_name
+        else:
+            secretary_id = None
+            secretary_name = None
+            
         appointment = Appointment(
             patient_name=patient_name,
             doctor_name=doctor_name,
             doctor_id=doctor_id,
             appointment_date=appointment_date,
             appointment_description = appointment_description,
+            patient_email=patient_email,
+            secretary_id=secretary_id,
+            secretary_name = secretary_name,# Set the secretary_id value
+
             
             # Assign values to other fields as needed
         )
@@ -180,6 +226,11 @@ def delete_appointmentDoctors(request, appointment_id):
     appointment.delete()    
     return redirect('appointmentspagedoctors')  # Redirect to the page displaying the table
 
+def delete_appointmentSecretary(request, appointment_id):
+    appointment = Appointment.objects.get(id=appointment_id)
+    appointment.delete()    
+    return redirect('appointmentspagesecretary')  # Redirect to the page displaying the table
+
 @login_required(login_url=('login'))
 def appointment_listIfYouAreADoctor(request):
     
@@ -190,12 +241,34 @@ def appointment_listIfYouAreADoctor(request):
     context = {'appointments': appointments}
     return render(request, 'appointmentspagedoctors.html', context)
 
+@login_required(login_url=('login'))
+def appointment_listIfYouAreADoctorLookingForSpecificPatient(request, selected_account_id):
+    
+    # Will delete print functions if final na hahahah
+    print(request.user)  # Check the user object
+    print(request.user.id)  # Check the user ID
+    
+     # Retrieve the user's ID
+    doctor_id = request.user.id
+    
+    # Filter appointments based on doctor ID and selected account ID
+    appointments = Appointment.objects.filter(doctor_id=doctor_id, account_id=selected_account_id)
+
+
+    context = {'appointments': appointments}
+    return render(request, 'appointmentspagedoctorsOptions.html', context)
+
 
 def your_view_function(request):
-    group_id = 2  # Replace with the desired group_id
-    group = Group.objects.get(id=group_id)
-    users = group.user_set.all()
-    return render(request, 'allPatients.html', {'users': users})
+    appointments = Appointment.objects.filter(doctor_id=request.user.id)
+    
+    # Filter out duplicate names, keeping only the last entry for each name
+    unique_names = appointments.values('patient_name').annotate(latest=Max('id'))
+    latest_appointments = appointments.filter(id__in=[item['latest'] for item in unique_names])
+    
+    
+    context = {'users': latest_appointments}
+    return render(request, 'allPatients.html', context)
 
 
 def your_view_functionallDoctors(request):
@@ -260,4 +333,53 @@ def dashboardForDoctor(request):
     # Render the template
     return render(request, 'dashboardForDoctor.html', context)
 
+def selectSecretary(request):
+    
+    user = request.user  # Get the current user
+    print(user)  # Check the user object
+    print(user.id)  # Check the user ID
+    print(user.email)  # Check the user email
 
+    # Check if the user already has a linked list
+    existing_link = DoctorLinksSecretary.objects.filter(secretary_id=user.id).exists()
+    if existing_link:
+        return HttpResponseBadRequest("You already have a linked list and cannot accept incoming lists.")
+
+    if request.method == 'POST':
+        secretary_id = request.POST.get('secretary_id')
+        secretary_name = request.POST.get('secretary_name')
+        doctor_name = request.POST.get('doctor_name')
+        doctor_id = request.POST.get('doctor_id')
+        # Get other form fields as needed
+
+        # Check if the list already exists for the selected doctor
+        existing_link = DoctorLinksSecretary.objects.filter(secretary_id=secretary_id, doctor_id=doctor_id).exists()
+        if existing_link:
+            return HttpResponseBadRequest("List already exists for the selected doctor.")
+
+        doctor = User.objects.get(id=doctor_id)
+        doctor_name = f"{doctor.first_name} {doctor.last_name}" if doctor else ""
+
+        secretary = User.objects.get(id=secretary_id)
+        secretary_name = f"{secretary.first_name} {secretary.last_name}" if secretary else ""
+
+        docLink = DoctorLinksSecretary(
+            secretary_name=secretary_name,
+            secretary_id=secretary_id,
+            doctor_name=doctor_name,
+            doctor_id=doctor_id,
+            # Assign values to other fields as needed
+        )
+
+        docLink.save(request=request)
+        return redirect('selectSecretary')  # Redirect to the same page after saving
+
+    group_id = 4  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    users = group.user_set.all()
+
+    context = {
+        'users': users,
+    }
+
+    return render(request, 'selectSecretary.html', context)
