@@ -1,4 +1,4 @@
-![SALAMADOC Logo](https://github.com/2202-XU-CSCC22A/groupB/assets/124771373/cf3631ac-67c7-44fe-a3e0-6fd5cdd6f23d)
+![SALAMADOC LOGO](https://github.com/2202-XU-CSCC22A/groupB/assets/124771373/11d34848-5757-4a19-bba3-28d1db8c0543)
 
 # Salamadoc: Management Appointment Web App System
 
