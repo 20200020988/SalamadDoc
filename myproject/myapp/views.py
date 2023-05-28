@@ -31,7 +31,8 @@ from django.views import View
 
 def home (request):
     return render(request, 'home.html', {})
-
+def newlogin (request):
+    return render(request, 'newlogin.html', {})
 def contact (request):
     return render(request, 'contact.html', {})
 
@@ -82,7 +83,7 @@ def patientsecretary (request):
     
     secretary = request.user  # Get the currently logged-in secretary
 
-    # Retrieve the DoctorLinksSecretary object for the secretary
+    # Retrieve the Doct5orLinksSecretary object for the secretary
     doctor_links_secretary = DoctorLinksSecretary.objects.filter(secretary_id=secretary.id).first()
     users = []
 
