@@ -12,6 +12,7 @@ class Appointment(models.Model):
     patient_email=models.CharField(max_length=40,null=True)
     secretary_id = models.CharField(max_length=40, null=True)  # Add the secretary_id field
     secretary_name=models.CharField(max_length=40,null=True)
+    doctor_department=models.CharField(max_length=40,null=True)
 
     
     # should be appointment_date=models.DateField()
@@ -34,6 +35,7 @@ class DoctorLinksSecretary(models.Model):
     secretary_name=models.CharField(max_length=40,null=True)
     doctor_name=models.CharField(max_length=40,null=True)
     doctor_id=models.CharField(max_length=40,null=True)
+    doctor_department=models.CharField(max_length=40,null=True)
 
     account = models.ForeignKey(User, on_delete=models.CASCADE, default=None, editable=False, null=True)
 

@@ -316,18 +316,17 @@
                   </thead>
                   <tbody>
 
-                    {% for user in users %}
+                    {% for doctor in doctors_with_departments %}
 
                       </td>
                       <td>
-                        {{ user.first_name }}
-                        {{ user.last_name }}
+                        {{ doctor.doctor_name }}
                       </td>
                       <td>
-                        {{ user.email }}
+                        {{ doctor.email }}
                       </td>
                       <th>
-                        Specialties
+                        {{ doctor.department }}
                       </th>
                       <td>
 

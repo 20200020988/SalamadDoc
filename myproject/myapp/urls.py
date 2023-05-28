@@ -35,6 +35,7 @@ urlpatterns = [
 
    path('selectSecretary.html', views.selectSecretary, name="selectSecretary"),
    path('appointmentspagedoctorsOptions/<str:selected_account_id>/', views.appointment_listIfYouAreADoctorLookingForSpecificPatient, name="appointmentspagedoctorsOptions"),
+   path('removeSecretary/', views.removeSecretary, name='removeSecretary'),
 
    
 ]

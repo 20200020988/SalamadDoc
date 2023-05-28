@@ -9,6 +9,9 @@ from datetime import datetime, timedelta
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Max
 from myapp.models import DoctorLinksSecretary
+from django.db.models import Count
+from .utils import departments
+
 
 
 
@@ -75,7 +78,50 @@ def appointmentspagedoctors (request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
 def dashboardsecretary (request):
-    return render(request, 'dashboardsecretary.html', {})
+    
+    secretary = request.user  # Get the currently logged-in secretary
+
+    # Retrieve the DoctorLinksSecretary object for the secretary
+    doctor_links_secretary = DoctorLinksSecretary.objects.filter(secretary_id=secretary.id).first()
+    appointments = []
+    
+    appointments_count = 0  # Initialize the appointments count
+    patients_count = 0  # Initialize the patients count
+
+    doctor_name = None  # Initialize the doctor name
+    doctor_department = None  # Initialize the doctor department
+
+
+    if doctor_links_secretary:
+        doctor_id = doctor_links_secretary.doctor_id
+        # Retrieve the appointments linked to the doctor
+        appointments = Appointment.objects.filter(doctor_id=doctor_id)
+        appointments_count = Appointment.objects.filter(doctor_id=doctor_id).count()
+
+        patients_count = (
+            Appointment.objects.filter(doctor_id=doctor_id)
+            .values('patient_name')
+            .annotate(count=Count('patient_name', distinct=True))
+            .count()
+        )
+        
+    if doctor_links_secretary:
+        doctor_id = doctor_links_secretary.doctor_id
+
+        # Retrieve the doctor linked to the current account
+        doctor = User.objects.filter(id=doctor_id).first()
+
+        if doctor:
+            doctor_name = f"{doctor.first_name} {doctor.last_name}"
+            doctor_department = doctor_links_secretary.doctor_department
+
+    context = {'appointments': appointments,
+               'appointments_count': appointments_count,
+               'patients_count': patients_count,
+               'doctor_name': doctor_name,
+               'doctor_department':doctor_department}
+    
+    return render(request, 'dashboardsecretary.html',context)
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
@@ -179,6 +225,7 @@ def appointment_bookingDetails(request):
         appointment_date = request.POST.get('appointment_date')
         appointment_description = request.POST.get('appointment_description')
         patient_email=request.POST.get('patient_email')
+        doctor_department=request.POST.get('doctor_department')
         # Get other form fields as needed
         
 
@@ -195,20 +242,22 @@ def appointment_bookingDetails(request):
         if doctor_links_secretary:
             secretary_id = doctor_links_secretary.secretary_id
             secretary_name = doctor_links_secretary.secretary_name
+            doctor_department = doctor_links_secretary. doctor_department
         else:
             secretary_id = None
             secretary_name = None
+            doctor_department = None
             
         appointment = Appointment(
             patient_name=patient_name,
             doctor_name=doctor_name,
+            doctor_department = doctor_department,
             doctor_id=doctor_id,
             appointment_date=appointment_date,
             appointment_description = appointment_description,
             patient_email=patient_email,
             secretary_id=secretary_id,
             secretary_name = secretary_name,# Set the secretary_id value
-
             
             # Assign values to other fields as needed
         )
@@ -279,6 +328,7 @@ def your_view_function(request):
     
     
     context = {'users': latest_appointments}
+    
     return render(request, 'allPatients.html', context)
 
 
@@ -286,13 +336,49 @@ def your_view_functionallDoctors(request):
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
     users = group.user_set.all()
-    return render(request, 'alldoctors.html', {'users': users})
+
+    doctors_with_departments = []
+
+    for user in users:
+        try:
+            doctor_link_secretary = DoctorLinksSecretary.objects.get(doctor_id=user.id)
+            department = doctor_link_secretary.doctor_department
+        except DoctorLinksSecretary.DoesNotExist:
+            department = "None"
+
+        doctor_with_department = {
+            'doctor_name': user.first_name + " " + user.last_name,
+            'email':user.email,
+            'department': department
+        }
+        doctors_with_departments.append(doctor_with_department)
+
+    return render(request, 'alldoctors.html', {'doctors_with_departments': doctors_with_departments})
 
 def your_view_functionallDoctorsDragDown(request):
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
     users = group.user_set.all()
-    return render(request, 'appointmentbook.html', {'users': users})
+
+    doctors_with_departments = []
+
+    for user in users:
+        try:
+            doctor_link_secretary = DoctorLinksSecretary.objects.get(doctor_id=user.id)
+            department = doctor_link_secretary.doctor_department
+        except DoctorLinksSecretary.DoesNotExist:
+            department = "None"
+
+        doctor_with_department = {
+            'user': user,
+            'department': department
+        }
+        doctors_with_departments.append(doctor_with_department)
+
+    context = {
+        'doctors_with_departments': doctors_with_departments
+    }
+    return render(request, 'appointmentbook.html', context)
 
 def dashboard(request):
     current_time = datetime.now()
@@ -328,69 +414,146 @@ def dashboard(request):
 def dashboardForDoctor(request):
     
 
+    doctor = request.user  # Get the currently logged-in secretary
+
+    secretary_links_doctor = DoctorLinksSecretary.objects.filter(doctor_id=doctor.id).first()
+    appointments = []
 
     # Call your_view_numberofdoctors function
     appointments = Appointment.objects.filter(doctor_id=request.user.id)
+    appointments_count = appointments.count()
 
+    # Get the unique user count
+    unique_user_count = appointments.values('patient_name').distinct().count()
     
+    secretary_name = "Not Yet Assigned"  # Initialize with an empty string
 
+    if secretary_links_doctor:
+        secretary_id = secretary_links_doctor.secretary_id
+
+        # Retrieve the doctor linked to the current account
+        secretary = User.objects.filter(id=secretary_id).first()
+
+        if secretary:
+            secretary_name = f"{secretary.first_name} {secretary.last_name}"
+            
     # Prepare the context data for the template
     context = {
         
         'appointments': appointments,
-
+        'unique_user_count': unique_user_count,
+        'appointments_count':appointments_count,
+        'secretary_name':secretary_name,
+        
     }
 
     # Render the template
     return render(request, 'dashboardForDoctor.html', context)
 
-def selectSecretary(request):
-    
+def removeSecretary(request):
     user = request.user  # Get the current user
-    print(user)  # Check the user object
-    print(user.id)  # Check the user ID
-    print(user.email)  # Check the user email
 
-    # Check if the user already has a linked list
+    doctor_links_secretary = DoctorLinksSecretary.objects.filter(doctor_id=user.id).first()
+    if doctor_links_secretary:
+        doctor_links_secretary.delete()
+        messages.success(request, "Assigned secretary removed successfully.")
+    else:
+        messages.error(request, "No assigned secretary found.")
+
+    return redirect('selectSecretary')
+
+def selectSecretary(request):
+    user = request.user  # Get the current user
+    
     existing_link = DoctorLinksSecretary.objects.filter(secretary_id=user.id).exists()
     if existing_link:
-        return HttpResponseBadRequest("You already have a linked list and cannot accept incoming lists.")
+        messages.error(request, "A secretary has already been linked to this account.")
+        return redirect('selectSecretary')  # Redirect to the same page with an error message
 
     if request.method == 'POST':
-        secretary_id = request.POST.get('secretary_id')
-        secretary_name = request.POST.get('secretary_name')
-        doctor_name = request.POST.get('doctor_name')
-        doctor_id = request.POST.get('doctor_id')
-        # Get other form fields as needed
+        form_type = request.POST.get('form_type')  # Get the form_type value
+        if form_type == 'select_secretary':
+            # Process the secretary form
+            secretary_id = request.POST.get('secretary_id')
+            secretary_name = request.POST.get('secretary_name')
+            doctor_name = request.POST.get('doctor_name')
+            doctor_id = request.POST.get('doctor_id')
 
-        # Check if the list already exists for the selected doctor
-        existing_link = DoctorLinksSecretary.objects.filter(secretary_id=secretary_id, doctor_id=doctor_id).exists()
-        if existing_link:
-            return HttpResponseBadRequest("List already exists for the selected doctor.")
+            # Check if the user already has a linked secretary (additional check)
+            existing_link = DoctorLinksSecretary.objects.filter(doctor_id=user.id).exists()
+            if existing_link:
+                messages.error(request, "A secretary has already been linked to this account.")
+                return redirect('selectSecretary')  # Redirect to the same page with an error message
 
-        doctor = User.objects.get(id=doctor_id)
-        doctor_name = f"{doctor.first_name} {doctor.last_name}" if doctor else ""
+            # Check if the list already exists for the selected secretary
+            existing_link = DoctorLinksSecretary.objects.filter(secretary_id=secretary_id).exists()
+            if existing_link:
+                messages.error(request, "The selected secretary is already assigned to another account.")
+                return redirect('selectSecretary')  # Redirect to the same page with an error message
 
-        secretary = User.objects.get(id=secretary_id)
-        secretary_name = f"{secretary.first_name} {secretary.last_name}" if secretary else ""
+            doctor = User.objects.get(id=doctor_id)
+            doctor_name = f"{doctor.first_name} {doctor.last_name}" if doctor else ""
 
-        docLink = DoctorLinksSecretary(
-            secretary_name=secretary_name,
-            secretary_id=secretary_id,
-            doctor_name=doctor_name,
-            doctor_id=doctor_id,
-            # Assign values to other fields as needed
-        )
+            secretary = User.objects.get(id=secretary_id)
+            secretary_name = f"{secretary.first_name} {secretary.last_name}" if secretary else ""
 
-        docLink.save(request=request)
-        return redirect('selectSecretary')  # Redirect to the same page after saving
+            docLink = DoctorLinksSecretary(
+                secretary_name=secretary_name,
+                secretary_id=secretary_id,
+                doctor_name=doctor_name,
+                doctor_id=doctor_id,
+                doctor_department=None,  # Initialize the field with None
 
-    group_id = 4  # Replace with the desired group_id
-    group = Group.objects.get(id=group_id)
-    users = group.user_set.all()
+                # Assign values to other fields as needed
+            )
 
-    context = {
-        'users': users,
-    }
+            docLink.save()
+            messages.success(request, "Secretary linked successfully.")
+            return redirect('selectSecretary')  # Redirect to the same page after successful submission
 
-    return render(request, 'selectSecretary.html', context)
+        elif form_type == 'select_department':
+            # Process the department form
+            doctor_department = request.POST.get('doctor_department')
+
+            # Retrieve the existing link for the current doctor
+            doctor_link = DoctorLinksSecretary.objects.filter(doctor_id=user.id).first()
+            if doctor_link:
+                doctor_link.doctor_department = doctor_department
+                doctor_link.save()
+                messages.success(request, "Department updated successfully.")
+                return redirect('selectSecretary')  # Redirect to the same page after successful submission
+
+        else:
+            messages.error(request, "Invalid form submission.")
+            return redirect('selectSecretary')  # Redirect to the same page with an error message
+
+    else:
+        doctor_links_secretary = DoctorLinksSecretary.objects.filter(doctor_id=user.id).first()
+
+        if doctor_links_secretary:
+            secretary_name = doctor_links_secretary.secretary_name
+            doctor_name = doctor_links_secretary.doctor_name
+            doctor_department = doctor_links_secretary.doctor_department  # Retrieve the assigned department
+
+            docLink = {
+                'secretary_name': secretary_name,
+                'doctor_name': doctor_name,
+                'doctor_department': doctor_department,  # Include the assigned department in the dictionary
+
+            }
+        else:
+            docLink = None
+
+        group_id = 4  # Replace with the desired group_id
+        group = Group.objects.get(id=group_id)
+        users = group.user_set.all()
+
+        context = {
+            'docLink': docLink,
+            'users': users,
+            'departments': departments,
+
+        }
+
+        return render(request, 'selectSecretary.html', context)
+
