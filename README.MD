@@ -59,6 +59,20 @@ Welcome to the SALAMADOK web application! This application allows patients, admi
 - View Users
 
     **Description**: You can view the user information of the web application, including the username, email address, first name, and last name. This helps in managing user accounts and their details.
+    
+
+## Screenshots
+
+- Patient's Dashboard
+    ![Patient Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+- Doctor's Dashboard
+    ![Doctor Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+- Admin's Dashboard
+    ![Admin Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
 ## Acknowledgements
 
  - [PolluxUI](https://github.com/BootstrapDash/polluxui-free-admin-template)
