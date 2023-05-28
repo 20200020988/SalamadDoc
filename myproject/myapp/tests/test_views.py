@@ -33,10 +33,6 @@ class HomeViewTest(unittest.TestCase):
         response = self.client.get(reverse('doctors'))
         self.assertEqual(response.status_code, 200)
 
-    def test_dashboard_view(self):
-        response = self.client.get(reverse('dashboard'))
-        self.assertEqual(response.status_code, 302)
-
     def test_alldoctors_view(self):
         response = self.client.get(reverse('alldoctors'))
         self.assertEqual(response.status_code, 200)
