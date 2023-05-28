@@ -67,7 +67,7 @@ Welcome to the SALAMADOK web application! This application allows patients, admi
     ![Patient_Dashboard](https://github.com/2202-XU-CSCC22A/groupB/assets/124771373/a46118f0-1f3d-4994-be96-369a58f55cfe)
 
 - Doctor's Dashboard
-    ![Doctor Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+    ![Doctor_Dashboard](https://github.com/2202-XU-CSCC22A/groupB/assets/124771373/94e29c6d-5479-4b31-8b22-4a5f48bf26cc)
 
 - Admin's Dashboard
     ![Admin Dashboard](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
