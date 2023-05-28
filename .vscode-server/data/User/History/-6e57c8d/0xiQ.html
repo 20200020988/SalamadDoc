@@ -30,8 +30,7 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="dashboard.html"><img src="{% static 'myapp/images/logo.svg' %}" alt="logo"/></a>
-          <a class="navbar-brand brand-logo-mini" href="dashboard.html"><img src="{% static 'images/logo-mini.svg' %}" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="dashboardForDoctor.html" style="color: white; font-weight: bold;">Salamadok</a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="typcn typcn-th-menu"></span>
           </button>
@@ -42,20 +41,19 @@
         <ul class="navbar-nav mr-lg-2">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
-              <span class="nav-profile-name">{{ request.user.first_name }} {{ request.user.last_name }}</span>
+              <img src="{% static 'myapp/images/faces/face5.jpg' %}" alt="profile"/>
+              <span class="nav-profile-name">Eugenia Mullins</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#" id="logoutBtn">
-                  <i class="typcn typcn-eject text-primary"></i>
-                  Logout
+              <a class="dropdown-item">
+                <i class="typcn typcn-cog-outline text-primary"></i>
+                Settings
               </a>
-          </div>
-          
-          <script>
-              document.getElementById("logoutBtn").addEventListener("click", function() {
-                  window.location.href = "{% url 'logout' %}";
-              });
-          </script>
+              <a class="dropdown-item">
+                <i class="typcn typcn-eject text-primary"></i>
+                Logout
+              </a>
+            </div>
           </li>
           <li class="nav-item nav-user-status dropdown">
               <p class="mb-0">Last login was 23 hours ago.</p>
@@ -168,8 +166,7 @@
       </div>
     </nav>
     <!-- partial -->
-    <nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
-    </nav>
+    
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_settings-panel.html -->
       <div class="theme-setting-wrapper">
@@ -366,7 +363,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'appointment_bookingDetails' %}">
+            <a class="nav-link" href="{% url 'mybooking' %}">
               <i class="typcn typcn-mortar-board menu-icon"></i>
               <span class="menu-title">My Bookings</span>
             </a>
@@ -383,10 +380,10 @@
             <div class="card-body">
 
               <div style="padding: 10px;"></div>
-              <h1 class="h4">Welcome,</h1>
+              <h1 class="h4">Welcome!</h1>
               <div style="padding: 5px;"></div>
-              <h1 class="h1">{{ request.user.first_name }}!</h1>
-
+              <h1 class="h1">Scheduled Session | Calendar View</h1>
+              
               <div style="padding: 10px;"></div>
 
 
@@ -397,104 +394,72 @@
         <div style="padding: 20px;"></div>
 
           <div class="row">
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-                <h5 class="mb-2 text-titlecase mb-4">Status</h5>
-              <div class="row">
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Doctor</p>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+
+                <div class="card-body">
+                  <h4 class="card-title">Booking Appointments Details</h4>
+                  <p class="card-description">
+                    Enter here the details for appointment
+                  </p>
+
+                  <form class="forms-sample" method="post" action="{% url 'appointment_bookingDetails' %}" method="post">
+
+                    {% csrf_token %}
+                    
+                    <div class="form-group"> 
+                      <input type="hidden" name="patient_id" value="{{ request.user.id }}">
+                      <input type="hidden" name="patient_email" value="{{ request.user.email }}">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="appointment_description">Details</label>
+                      <textarea class="form-control" name="appointment_description" id="appointment_description" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select Doctor and Department</label>
+                      <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="doctor_id">
+                        <option>Select</option>
+                        {% for user in users %}
+                        <option value="{{ user.id }}" data-secretary-id="{{ user.secretary_id }}">{{ user.first_name }} {{ user.last_name }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div class="col-lg-3 grid-margin stretch-card">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Appointment Date</h4>
+                            <div style="text-align: left; vertical-align: top; margin-top: 100px">
+                          
+                             <input type="date" name="appointment_date" id="id_appointment_date">
+                            {{example_form.appointment_date}}                             
+                        </div>
                       </div>
-                      <h2>{{ user_count }}</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
                     </div>
                   </div>
 
+                    <div style="padding: 10px;"></div>
+
+                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+                  <button class="btn btn-light" >Cancel</button>
+
+                  </form>
                 </div>
 
-                <div class="col-md-6 grid-margin stretch-card">
-                  
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Total Booking</p>
-                      </div>
-                      <h2>{{ appointments_count }}</h2>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="row h-100">
-
-                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
-
-                  <div class="card">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <p class="mb-0 text-muted">Latest Booking</p>
-                      </div>
-                      <h1> insert recent date here </h1>
-                      <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-md-6 stretch-card">
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-              <h5 class="mb-2 text-titlecase mb-4">Your Upcoming Booking</h5>
-
-              <div class="row h-100">
-
-                <div class="col-md-12 stretch-card">
-                  <div class="card">
-
-                    <div class="card-body">
-                      <p class="card-description">
-                        Here is your upcoming appointments <code></code>
-                      </p>
-                      <div class="table-responsive">
-                        <table class="table table-hover">
-                          <thead>
-                            <tr>
-                              <th>Patient Name</th>
-                              <th>Doctor</th>
-                              <th>Description</th>
-                              <th>Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-
-                            {% for data in appointments %}  
-
-                            <tr>
-                              <td>{{data.patient_name}}</td>
-                              <td>{{data.doctor_name}}</td>
-                              <td>{{data.appointment_description}}</td>
-                            </tr>
-                            {% endfor %}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
+
+          <div class="row">
+
           </div>
+
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-            <div class="card">
+            <div class="">
                 <div class="card-body">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
