@@ -72,6 +72,27 @@ Welcome to the SALAMADOK web application! This application allows patients, admi
 
 - Admin's Dashboard
     ![Admin_Dashboard](https://github.com/2202-XU-CSCC22A/groupB/assets/124771373/5adcc6b9-3f91-49a9-9703-48515aeb5204)
+    
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/2202-XU-CSCC22A/groupB
+```
+
+Go to the project directory
+
+```bash
+  cd myproject
+```
+
+Start the server
+
+```bash
+  py manage.py runserver
+```
 
 ## Acknowledgements
 
