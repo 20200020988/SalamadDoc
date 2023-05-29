@@ -1,4 +1,4 @@
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponseBadRequest, HttpResponseRedirect
 from django.shortcuts import render, redirect 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -8,6 +8,7 @@ from django.contrib.auth.models import Group, User
 from datetime import datetime, timedelta
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Max
+from django.urls import reverse
 from myapp.models import DoctorLinksSecretary
 from django.db.models import Count
 from .utils import departments
@@ -75,6 +76,7 @@ def allPatients (request):
 def appointmentspagedoctors (request):
     return render(request, 'appointmentspagedoctors.html', {})
 
+#
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['secretary'])
 def dashboardsecretary (request):
@@ -170,7 +172,7 @@ def appointmentspagesecretary (request):
 
     return render(request, 'appointmentspagesecretary.html', context)
 
-
+#
 def register (request):
     form = CreateUserForm()
     if request.method == 'POST':
@@ -185,7 +187,7 @@ def register (request):
             
             return redirect('login')
     return render(request, 'register.html', {'form': form})
-
+#
 @unauthenticated_user
 def loginPage (request):
     
@@ -207,16 +209,42 @@ def loginPage (request):
             messages.info(request, 'Username or Password is incorrect')
         
     return render(request, 'login.html', {})
-
+#
 def logoutUser(request):
     logout(request)
     return redirect('home')
-
+#
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['patient'])
 def dashboard(request):
-    return render(request, 'dashboard.html', {})
+    current_time = datetime.now()
 
+    group_id = 3  # Replace with the desired group_id
+    group = Group.objects.get(id=group_id)
+    user_count = group.user_set.count()
+
+    appointments = Appointment.objects.filter(account=request.user)
+    appointments_count = appointments.count()
+
+    latest_appointment_date = None
+    try:
+        latest_appointment = appointments.latest('appointment_date')
+        latest_appointment_date = latest_appointment.appointment_date
+    except ObjectDoesNotExist:
+        # Handle the case when no appointments exist
+        pass
+
+    # Prepare the context data for the template
+    context = {
+        'user_count': user_count,
+        'appointments_count': appointments_count,
+        'appointments': appointments,
+        'latest_appointment_date': latest_appointment_date,
+    }
+
+    return render(request, 'dashboard.html', context)
+
+#
 @login_required(login_url=('login'))
 def appointment_bookingDetails(request):
     if request.method == 'POST':
@@ -274,24 +302,23 @@ def appointment_bookingDetails(request):
 
     return render(request, 'mybooking.html', context)
 
-
-
+#
 def delete_appointment(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
     appointment.delete()    
     return redirect('appointment_bookingDetails')  # Redirect to the page displaying the table
-
+#
 def delete_appointmentDoctors(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
     appointment.delete()    
     return redirect('appointmentspagedoctors')  # Redirect to the page displaying the table
-
+#
 def delete_appointmentSecretary(request, appointment_id):
     appointment = Appointment.objects.get(id=appointment_id)
     appointment.delete()    
     return redirect('appointmentspagesecretary')  # Redirect to the page displaying the table
-
-@login_required(login_url=('login'))
+#
+@login_required(login_url=('login')) 
 def appointment_listIfYouAreADoctor(request):
     
     # Will delete print functions if final na hahahah
@@ -300,7 +327,7 @@ def appointment_listIfYouAreADoctor(request):
     appointments = Appointment.objects.filter(doctor_id=request.user.id)
     context = {'appointments': appointments}
     return render(request, 'appointmentspagedoctors.html', context)
-
+#
 @login_required(login_url=('login'))
 def appointment_listIfYouAreADoctorLookingForSpecificPatient(request, selected_account_id):
     
@@ -318,7 +345,7 @@ def appointment_listIfYouAreADoctorLookingForSpecificPatient(request, selected_a
     context = {'appointments': appointments}
     return render(request, 'appointmentspagedoctorsOptions.html', context)
 
-
+#
 def your_view_function(request):
     appointments = Appointment.objects.filter(doctor_id=request.user.id)
     
@@ -331,7 +358,7 @@ def your_view_function(request):
     
     return render(request, 'allPatients.html', context)
 
-
+#
 def your_view_functionallDoctors(request):
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
@@ -354,7 +381,7 @@ def your_view_functionallDoctors(request):
         doctors_with_departments.append(doctor_with_department)
 
     return render(request, 'alldoctors.html', {'doctors_with_departments': doctors_with_departments})
-
+#
 def your_view_functionallDoctorsDragDown(request):
     group_id = 3  # Replace with the desired group_id
     group = Group.objects.get(id=group_id)
@@ -379,38 +406,7 @@ def your_view_functionallDoctorsDragDown(request):
         'doctors_with_departments': doctors_with_departments
     }
     return render(request, 'appointmentbook.html', context)
-
-def dashboard(request):
-    current_time = datetime.now()
-
-    group_id = 3  # Replace with the desired group_id
-    group = Group.objects.get(id=group_id)
-    user_count = group.user_set.count()
-
-    appointments = Appointment.objects.filter(account=request.user)
-    appointments_count = appointments.count()
-
-    latest_appointment_date = None
-    try:
-        latest_appointment = appointments.latest('appointment_date')
-        latest_appointment_date = latest_appointment.appointment_date
-    except ObjectDoesNotExist:
-        # Handle the case when no appointments exist
-        pass
-
-    # Prepare the context data for the template
-    context = {
-        'user_count': user_count,
-        'appointments_count': appointments_count,
-        'appointments': appointments,
-        'latest_appointment_date': latest_appointment_date,
-    }
-
-    return render(request, 'dashboard.html', context)
-
-    # Render the template
-    return render(request, 'dashboard.html', context)
-
+#
 def dashboardForDoctor(request):
     
 
@@ -449,7 +445,7 @@ def dashboardForDoctor(request):
 
     # Render the template
     return render(request, 'dashboardForDoctor.html', context)
-
+#
 def removeSecretary(request):
     user = request.user  # Get the current user
 
@@ -461,8 +457,9 @@ def removeSecretary(request):
         messages.error(request, "No assigned secretary found.")
 
     return redirect('selectSecretary')
-
+#
 def selectSecretary(request):
+    
     user = request.user  # Get the current user
     
     existing_link = DoctorLinksSecretary.objects.filter(secretary_id=user.id).exists()
@@ -522,10 +519,14 @@ def selectSecretary(request):
                 doctor_link.save()
                 messages.success(request, "Department updated successfully.")
                 return redirect('selectSecretary')  # Redirect to the same page after successful submission
+            else:
+                messages.error(request, "No secretary linked to this account.")
+            
+            return HttpResponseRedirect(reverse('selectSecretary'))
 
         else:
             messages.error(request, "Invalid form submission.")
-            return redirect('selectSecretary')  # Redirect to the same page with an error message
+            return HttpResponseRedirect(reverse('selectSecretary'))
 
     else:
         doctor_links_secretary = DoctorLinksSecretary.objects.filter(doctor_id=user.id).first()
