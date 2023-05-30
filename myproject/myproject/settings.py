@@ -27,7 +27,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-b8e4&-eco5lmiof2hr1727auol%r85)*8q_ma3dct4dd1n4@q+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -86,11 +86,22 @@ DATABASES = {
     }
 }
 '''
-
+'''
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL'))
 }
+'''
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'salamadocdatabase',
+        'USER': 'salamadocdatabase_user',
+        'PASSWORD': 'jqsWcETPuqGU2OdlFM4K0c6PWCOtfpAd',
+        'HOST': 'dpg-chqqtrvdvk4goeu42fc0-a.singapore-postgres.render.com',
+        'PORT': '5432',
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
